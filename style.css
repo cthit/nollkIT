@@ -112,8 +112,11 @@ body {
       body .content-container.declaration iframe {
         width: 100%; }
     body .content-container .scheme-page-container {
-      width: 58%;
+      width: 60%;
       margin: 1% auto; }
+      body .content-container .scheme-page-container iframe {
+        width: 96%;
+        margin: 1% 2% 0 2%; }
     body .content-container #group-points {
       background-color: #005a7d;
       border-radius: 0.15em;
