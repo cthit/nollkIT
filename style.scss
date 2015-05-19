@@ -592,8 +592,7 @@ body {
 
 			//Content container for scheme page
 			.scheme-page-container{
-				width: 86%;
-				margin:1% auto;
+				width: 90%;
 			}
 			//end scheme page container
 
@@ -823,6 +822,10 @@ body {
 			//Content container for scheme page
 			.scheme-page-container{
 				width: 96%;
+				iframe{
+					margin:0;
+					width: 100%;
+				}
 			}
 			//end scheme page container
 
