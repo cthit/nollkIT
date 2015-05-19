@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="<php? bloginfo('charset'); ?>"> 
-		<meta name="viewport" conent="width=device-width">
+		<meta charset="<?php bloginfo('charset'); ?>"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 
