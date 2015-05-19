@@ -322,8 +322,7 @@ body {
       body header #contact-container iframe {
         display: none; }
   body .content-container .scheme-page-container {
-    width: 86%;
-    margin: 1% auto; }
+    width: 90%; }
   body .content-container.declaration {
     margin: 0 12%; }
   body .content-container #scheme-daily {
@@ -426,6 +425,9 @@ body {
     margin: 1% 1% 0 1%; }
     body .content-container .scheme-page-container {
       width: 96%; }
+      body .content-container .scheme-page-container iframe {
+        margin: 0;
+        width: 100%; }
     body .content-container.declaration {
       margin: 3% 2%; }
       body .content-container.declaration iframe {
