@@ -5,8 +5,10 @@
 		<meta name="viewport" conent="width=device-width">
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+
 		<!--Här under läggs den heliga nollbrickan till bara så du vet -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/nollbricka.png" /> 
+		
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 	</head>
