@@ -36,7 +36,7 @@
 			<nav class="site-nav">
 				<div id="logo-button-wrapper">
 					<div id="logo-container">
-						<a href="beta.nollk.it"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/top_logo.png"></a>
+						<a href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/top_logo.png"></a>
 					</div>
 					<div id="mobile-hamburger-container">
 						<button style="button" id="hamburger">&#9776;</button>
