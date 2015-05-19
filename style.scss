@@ -185,8 +185,12 @@ body {
 			}
 		}
 		.scheme-page-container{
-			width: 58%;
+			width: 60%;
 			margin:1% auto;
+			iframe{
+				width: 96%;
+				margin:1% 2% 0 2%;
+			}
 		}
 		#group-points{
 			background-color: $post-header-background-color;
