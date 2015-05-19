@@ -477,7 +477,7 @@ body {
 
 
 //--------------------------------SCREENS WITH MAX WIDTH OF 960PX BELOW------------------------------
-@media screen and (max-width: 960px){
+@media only screen and (max-width: 960px){
 	body{
 		//HEADER START
 		header {
@@ -685,7 +685,7 @@ body {
 
 
 //-------------------------------------START MAX-WIDTH 660px-----------------------------
-@media screen and (max-width: 660px){
+@media only screen and (max-width: 660px){
 	body{
 		//HEADER START
 		header {
