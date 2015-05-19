@@ -1,3 +1,5 @@
+# Wordpress ignore
+
 *.log
 .htaccess
 sitemap.xml
@@ -11,3 +13,12 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+
+# Mac ignore
+
+.DS_Store
+
+# Sass
+
+.sass-cache/
+

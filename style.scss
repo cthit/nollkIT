@@ -1,0 +1,861 @@
+	/*
+Theme Name: NollKIT
+Author: Oscar Evertsson & Katarina Bergbom
+Description: This is a team created only for Nollk.it
+Version: 1.0
+*/
+
+
+//Constants
+$standard-font:arial;
+$background-color:#00ABE3;
+$footer-background-color:rgba(0,0,0,0.8);
+$header-background-color:rgba(0,0,0,0.6);
+$underlying-banner-color:rgba(0,0,0,0.4);
+$post-background-color:white;
+$post-header-background-color:#005a7d;
+$post-header-text-color:white;
+$post-footer-background-color:049372;
+$post-footer-text-color:black;
+$post-text-color:black;
+$text-hover-color:white;
+$text-color:gray;
+$mandatory-table-color:red;	
+$lecture-table-color:green;
+$sleep-table-color:yellow;
+$reception-table-color:blue;
+$border-radius:0.15em;
+
+
+
+
+body {
+	font-family: $standard-font;
+	color: $text-color;
+	background-color: $background-color;
+	margin:0;
+	padding:0;
+
+	//Most ul:s uses this class to bring the basic style of ul:s.
+	.list{
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		a{
+			text-decoration: none;
+			color: inherit;
+			&:hover{
+				color:white;
+			}
+		}
+	}
+	//End List
+
+	//HEADER START
+	header {
+		padding-top: 10px;
+		height: 400px;
+		background-image: url(http://localhost/wordpress/wp-content/uploads/2015/05/img_5473__1_.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: relative;
+			//HEADER WRAPPER START
+			.header-wrapper{
+				height: 70px;
+				//NAVIGATION START
+				.site-nav {
+					background-color: $header-background-color; // ÄNDRA SENARE
+					font-size:0; // To remove whitespace between inline-blocks
+					height: 70px;
+					#logo-button-wrapper{
+						font-size: 0;
+						height: inherit;
+						width: 300px;
+						display: inline-block;
+						//LOGO CONTAINER
+						#logo-container{
+							margin-left: 5%;
+							height: inherit;
+							width: 300px;
+							display: inline-block;
+							a{
+								height: inherit;
+								#logo{
+									height: inherit;
+									width: 100%;
+								}
+							}
+						}
+						//LOGO CONTAINER END
+
+						//MOBILE-HAMBURGER-CONTAINER START
+						#mobile-hamburger-container{
+							display:none;
+						}
+						//HAMBURGER-CONTAINER END
+					}	
+					//LIST OF NAVIGATION START
+					.menu-header-container{
+						float: right;
+						font-size: 16px;
+						vertical-align: top;
+						height: inherit;
+						width: 67%;
+						display: inline-block;
+						text-align: right;
+						height: inherit;
+						ul{
+							display: inline-block;
+							width: 100%;
+							margin:0;
+							padding:0;
+							li{
+								margin:0 5px;
+								padding: 24.5px 0;
+								display: inline-block;
+								a{
+									color:$text-color; // ÄNDRA SENARE
+									text-decoration: none;
+									padding: inherit;
+									font-size: 1.1em;
+									&:hover{
+										color: $text-hover-color; // ÄNDRA SENARE
+									}
+								}
+								&:last-child{
+									margin-right: 5%;
+								}
+							}
+						}
+					}
+					//LIST OF NAVIGATION END
+				}
+				//NAVIGATION END
+			} 
+			//HEADER WRAPPER ENDS
+
+		//CONTACT-CONTAINER START	
+		#contact-container{
+			background-color: rgba(0,0,0,.4);
+			text-align: right;
+			display: block;
+			width: 100%;
+			height: 24px;
+			#number-container {
+				width: 60%;
+				display: inline-block;
+				float: left;
+				height: inherit;
+				ul{
+					text-align: left;
+					height: inherit;
+					li{
+						margin-left: 2%;
+						height: inherit;
+						display: inline-block;
+						a{
+							color: white;
+						}
+					
+					}
+				}
+			}	
+			.fb-like{
+				margin-top: 1.0075px;
+				position: relative;
+				vertical-align: middle;
+			}
+			iframe{
+				position: relative;
+				vertical-align: middle;
+				margin-right: 3%;
+			}
+		}
+		//CONTACT-CONTAINER ENDS
+	}
+	//HEADER END
+
+	//START CONTENT
+	.content-container{
+		margin:1% 2% 0 2%;
+		&.declaration{
+			margin: 0 25%;
+			iframe{
+				width: 100%;
+			}
+		}
+		.scheme-page-container{
+			width: 58%;
+			margin:1% auto;
+		}
+		#group-points{
+			background-color: $post-header-background-color;
+			border-radius: $border-radius;
+			float: left;
+			width: 20%;
+			text-align: center;
+			ul{
+				text-align: left;
+				li{
+					padding: 0.7em 2em;
+				}
+			}
+		}
+		#scheme-daily{
+			text-align: center;
+			float: right;
+			width: 20%;
+			height: 400px
+		}
+		//ALL POSTS USE THIS CONTAINER
+		.posts-container{
+			margin:0 auto;
+			width: 60%;
+
+			//Post container for phaddergroups(who's in what group, name of grp etc.)
+			&.phaddergroup {
+				width: 80%;
+				text-align: center;
+				.post{
+					display: inline-block;
+					width: 46%;	
+					article {
+						margin:2%;
+					}
+
+				}
+				&.leader{
+					.post{
+						width: 94%;
+					}
+				}
+			}
+			//End phaddergroup
+
+			//Every Post uses this container
+			.post{
+				color: $post-text-color;
+				//Article for every post
+				article{
+					border-radius: $border-radius;
+					background-color: $post-background-color;
+					width: 96%;
+					margin: 1% 2% 0 2%;
+					//Header of every post.
+					.post-header-container{
+						background-color: $post-header-background-color;
+						border-top-left-radius: $border-radius;
+						border-top-right-radius: $border-radius;
+						cursor:pointer;
+						text-align:center;
+						color:$post-header-text-color;
+						height: 2.5em;
+						background-image: none;
+					}
+					//Content container for every pot
+					.post-content-container{
+						padding:0 3% 0 3%;	
+						margin:0;
+							iframe{
+								width: 100%;
+							}
+							
+							//Content container for scheme
+							#scheme{
+								width: 100%;
+								text-align: center;
+								tr{
+									text-align: left;
+									&:first-child{
+										td{
+											&:first-child{
+												background-color:$mandatory-table-color;
+												height: 50px;
+												width: 5%;
+											}
+										}
+									}
+									&:nth-child(2){
+										td{
+											&:first-child{
+												background-color:$lecture-table-color;
+												height: 50px;
+												width: 5%;
+											}
+										}
+									}
+									&:nth-child(3){
+										td{
+											&:first-child{
+												background-color:$sleep-table-color;
+												height: 50px;
+												width: 5%;
+											}
+										}
+									}
+									&:nth-child(4){
+										td{
+											&:first-child{
+												background-color:$reception-table-color;
+												height: 50px;
+												width: 5%;
+											}
+										}
+									}
+								}	
+							}
+							//End content container for scheme
+
+							//Content for FAQ
+							&.faq{
+								display: none;
+								&.show{
+									display:block
+								}
+							}
+							//End content for FAQ
+
+					}
+					// End Content container for every post.
+
+					// Post footer container start
+					.post-footer-container{
+						text-align: center;
+						font-size: 0.7em;
+						color: $post-footer-text-color;
+						background-color: $post-footer-background-color;
+						border-bottom-right-radius: $border-radius;
+						border-bottom-left-radius: $border-radius;
+						ul{
+							width: 100%;
+							padding: 0;
+							margin:0;
+							list-style-type: none;
+							li{
+								display: inline-block;
+								width: 31%;
+								&:first-child{
+									text-align: left;
+									padding-left:1%;
+								}
+								&:last-child{
+									text-align: right;
+									padding-right: 1%;
+								}
+							}
+						}
+					}
+					//END POST FOOTER
+				}
+				//End Article
+			}
+			//END POST
+		}
+		//All posts container
+	}
+	//End main content
+
+	//Site footer start
+	.site-footer{
+		clear: both;
+		margin-top: 1em;
+		font-size: 0.7em;
+		width: 100%;
+		padding: 1em 0;
+		background-color:$footer-background-color;
+
+		//Wrapper start
+		#wrapper{
+			font-size: 0;
+			width: 100%;
+
+			//common class for the 3x section elements in the footer.
+			.lots-of-links{
+				display: inline-block;
+				width: 33.333333%;
+				font-size: 12px;
+				h3{
+					font-size: 18.7px;
+					text-align: center;
+				}
+
+				//Target specially the container for the sektionen related information.
+				&#sektionen{
+						font-size: 0;
+						ul{
+							font-size: 12px;
+							display: inline-block;
+							width: 47.5%;
+							padding-left: 2.5%;
+							&#name-of-compounds{
+								width: 47.5%;
+								text-align: right;
+								padding-right: 2.5%;
+								padding-left: 0;
+							}
+						}
+					}
+				}
+				//end sektionen.
+
+				//Common class for the 2x "good links" slits.
+				.good-links{
+					ul{
+						font-size: 12px;
+						li{
+							text-align: center;
+						}
+					}
+				}
+				//End good links
+		}
+		//End lots-of-links
+
+		//NAV START
+		.site-nav{
+			.menu-footer-container{
+				text-align: center;
+				ul{
+					padding:0;
+					list-style-type: none;
+					li{
+						margin-top: 1em;
+						margin-left: 1%;
+						display: inline-block;
+						padding: 3px 10px;
+						&:hover{
+							a{
+								color:$text-hover-color;
+							}
+						}
+						a{
+							width: inherit;
+							height: inherit;
+							text-decoration: none;
+							color:$text-color;
+							font-size: 0.8em;
+						}
+					}
+				}
+			}
+		}
+		//NAV END	
+	}
+	//End site-footer
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------SCREENS WITH MAX WIDTH OF 960PX BELOW------------------------------
+@media screen and (max-width: 960px){
+	body{
+		//HEADER START
+		header {
+			padding-top: 0;
+			height: 300px;
+				//HEADER WRAPPER START
+				.header-wrapper{
+					//NAVIGATION START
+					.site-nav {
+						height: 135px;
+
+						//Logo together with buttons for mobile wrapper start.
+						#logo-button-wrapper{
+							text-align: center;
+							font-size: 0;
+							height: 70px;
+							width: 100%;
+
+							//LOGO CONTAINER
+							#logo-container{
+								margin:0 auto;
+								height: 70px;
+								width: 300px;
+								display: block;
+							}
+							//LOGO CONTAINER END
+
+							//MOBILE-HAMBURGER-CONTAINER START
+							#mobile-hamburger-container{
+								display:none;
+							}
+							//HAMBURGER-CONTAINER END
+						}
+						//End logo together with mobile buttons.
+
+						//LIST OF NAVIGATION START
+						.menu-header-container{
+							width: 100%;
+							display:block;
+							text-align: right;
+							height: 65px;
+							ul{
+								height: inherit;
+								display: inline-block;
+								width: 100%;
+								margin:0 auto;
+								padding:0;
+								text-align: center;
+								li{
+									margin: 0 5px;
+									padding: 24.5px 0;
+									display: inline-block;
+									a{
+										color:$text-color; // ÄNDRA SENARE
+										text-decoration: none;
+										padding: inherit;
+										font-size: 1.1em;
+										&:hover{
+											color: $text-hover-color; // ÄNDRA SENARE
+										}
+									}
+									&:last-child{
+										margin-right: 5px;
+									}
+								}
+							}
+						}
+						//LIST OF NAVIGATION END
+					}
+					//NAVIGATION END
+				} 
+				//HEADER WRAPPER ENDS
+				
+			//Contact container starts		
+			#contact-container{
+				display:inline-block;
+				text-align: center;
+
+				//Journummer and MK number container
+				#number-container{
+					width: 100%;
+					ul{
+						text-align: center;
+						li{
+							width: 40%;
+							margin:0;
+						}
+					}
+				}
+				//End number container
+
+				//Fb like button
+				.fb-like {
+					display: none;
+				}
+
+				//Twitter button
+				iframe{
+					display:none;
+				}
+			}
+			//Contact container ends	
+		}
+		//HEADER END
+
+		//START CONTENT
+		.content-container{
+
+			//Content container for scheme page
+			.scheme-page-container{
+				width: 86%;
+				margin:1% auto;
+			}
+			//end scheme page container
+
+			//Content container for declaration
+			&.declaration{
+				margin: 0 12%;
+			}
+			//declaration container end.
+
+			//daily scheme on index.php container
+			#scheme-daily {
+				float: none;
+				width: 86%;
+				margin:0 auto;
+			}
+			//end scheme daily
+
+			//All normal posts container.
+			.posts-container{
+				display: block;
+				width: 90%;
+
+				//Special phaddergroup posts look
+				&.phaddergroup {
+					width: 90%;
+					.post{
+						width: 100%;	
+					}
+					&.leader{
+						.post{
+							width: 100%;
+						}
+					}
+				}
+				//end phaddergroup posts
+			}
+			//end normal posts container
+		}
+
+		//END CONTENT
+
+		//Start site-footer
+		.site-footer{
+			#wrapper{
+				#sektionen{
+					width: 100%;
+				}
+				#good-links1{
+					display:none;
+				}
+				#good-links2{
+					display:none;
+				}
+			}
+		}
+		//end site-footer
+
+	}	
+	//BODY END
+}
+//-------------------------------------END MAX-WIDTH 960PX-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------START MAX-WIDTH 660px-----------------------------
+@media screen and (max-width: 660px){
+	body{
+		//HEADER START
+		header {
+			height: 250px;
+			background-repeat: no-repeat;
+				//HEADER WRAPPER START
+				.header-wrapper{
+					z-index: 10;	
+					position: fixed;
+					width: 100%;
+					background-color: none;
+
+					//NAVIGATION START
+					.site-nav {
+						height: 70px;
+						background-color: transparent;
+
+						//Logo together with buttons for mobile, wrapper start.
+						#logo-button-wrapper{	
+							display:block;
+							text-align: left;
+							background-color: $header-background-color;
+
+							//LOGO CONTAINER
+							#logo-container{
+								margin-left: 3%;
+								width: 200px;
+								background-color: transparent;
+								display: inline-block;
+							}
+							//LOGO CONTAINER END
+
+							//MOBILE-HAMBURGER-CONTAINER START
+							#mobile-hamburger-container{
+								display:inline-block;
+								width: 15%;
+								height: 70px;
+								vertical-align: top;
+								background-color: transparent;
+								float: right;
+								&:hover{
+									button{
+										color:white;
+									}
+								}
+								button{
+									padding:0;
+									height: inherit;
+									background-color:transparent;
+									color:$text-color;
+									border:none;
+									font-size: 50px;
+									width: 100%;
+									&#cross{
+										display: none;
+									}
+								}
+							}
+							//HAMBURGER-CONTAINER END
+						}
+						//End logo and button wrapper
+
+						//LIST OF NAVIGATION START
+						.menu-header-container{
+							font-size: 16px;
+							vertical-align: top;
+							height: inherit;
+							width: 100%;
+							display:none;
+							text-align: right;
+							height: 150px;
+							background-color: $header-background-color;
+							ul{ 
+								height: inherit;
+								display: inline-block;
+								width: 100%;
+								margin:0 auto;
+								padding:0;
+								text-align: center;
+								li{
+									margin:0;
+									padding: 0;
+									display: block;
+									&:last-child{
+										margin-right: 0;
+									}
+								}
+							}
+							&.show{
+								display: block;
+							}
+						}
+						//LIST OF NAVIGATION END
+						
+					}
+					//NAVIGATION END
+				} 
+				//HEADER WRAPPER ENDS
+
+			//Contact container starts		
+			#contact-container{
+				margin-bottom: 1.7em;
+				position: absolute;bottom:0;
+				text-align: center;
+				background-color: transparent;
+
+				//Journummer and MK number container
+				#number-container{
+					width: 100%;
+					ul{
+						text-align: center;
+						li{
+							width: 100%;
+							display: block;
+							a{
+								
+							}
+						}
+					}
+				}
+				//End number container
+			}
+			//Contact container ends	
+		}
+		//HEADER END
+
+
+		.content-container{
+			margin:1% 1% 0 1%;
+
+			//Content container for scheme page
+			.scheme-page-container{
+				width: 96%;
+			}
+			//end scheme page container
+
+			//Content container for declaration
+			&.declaration{
+				margin: 3% 2%;
+				iframe{
+					width: 100%;
+				}
+			}
+			//Declaration container end
+
+			//daily scheme on index.php container
+			#scheme-daily {
+				width: 96%;
+			}
+			//end scheme daily
+
+			//All normal posts container.
+			.posts-container{
+				width: 100%;
+
+				//Special phaddergroup posts look
+				&.phaddergroup {
+					width: 100%;
+					text-align: center;
+					.post{
+						display: inline-block;
+						width: 100%;	
+					}
+				}
+				//end phaddergroup posts
+			}
+			//end normal posts container
+		}
+		//End normal posts container
+	}	
+	//BODY END
+}
+
