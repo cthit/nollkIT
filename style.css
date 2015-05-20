@@ -9,7 +9,7 @@ Version: 1.0
   font-family: "blissful-thinking";
   src: url("fonts/BlissfulThinking.otf"); }
 body {
-  font-family: arial;
+  font-family: Arial;
   color: gray;
   background-color: #00ABE3;
   margin: 0;
@@ -444,6 +444,12 @@ body {
         text-align: center; }
         body .content-container .posts-container.phaddergroup .post {
           display: inline-block;
-          width: 100%; } }
+          width: 100%; }
+  body .site-footer #wrapper .lots-of-links#sektionen {
+    width: 100%; }
+    body .site-footer #wrapper .lots-of-links#sektionen h3 {
+      font-size: 15px; }
+    body .site-footer #wrapper .lots-of-links#sektionen ul {
+      font-size: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
