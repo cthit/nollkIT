@@ -12,7 +12,7 @@ Version: 1.0
 
 
 //Constants
-$standard-font:arial;
+$standard-font:Arial;
 $background-color:#00ABE3;
 $footer-background-color:rgba(0,0,0,0.8);
 $header-background-color:rgba(0,0,0,0.6);
@@ -867,7 +867,29 @@ body {
 			//end normal posts container
 		}
 		//End normal posts container
+
+		//Start site-footer
+		.site-footer{
+			#wrapper{
+				.lots-of-links{
+					&#sektionen{
+					width: 100%;
+						h3{
+							font-size: 15px;
+						}
+						ul{
+							font-size: 10px;
+						}
+					}
+				}	
+			}
+		}
+		//end site-footer
 	}	
 	//BODY END
 }
+//-------------------------------------END MAX-WIDTH 660PX-------------------------------
+
+
+
 
