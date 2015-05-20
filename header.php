@@ -31,7 +31,7 @@
 	</script>
 	
 	
-	<header class="site-header">
+	<header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit15.jpg);">
 		<div class="header-wrapper">
 			<nav class="site-nav">
 				<div id="logo-button-wrapper">

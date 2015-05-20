@@ -26,10 +26,11 @@ body {
   body header {
     padding-top: 10px;
     height: 400px;
-    background-image: url(http://localhost/wordpress/wp-content/uploads/2015/05/img_5473__1_.jpg);
-    background-size: 100%;
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
-    position: relative; }
+    position: relative;
+    background-size: 100%; }
     body header .header-wrapper {
       height: 70px; }
       body header .header-wrapper .site-nav {
