@@ -400,25 +400,27 @@ body {
               body header .header-wrapper .site-nav #logo-button-wrapper #mobile-hamburger-container button#cross {
                 display: none; }
         body header .header-wrapper .site-nav .menu-header-container {
-          font-size: 16px;
+          font-size: 1rem;
           vertical-align: top;
-          height: inherit;
           width: 100%;
           display: none;
+          height: 13.5rem;
           text-align: right;
-          height: 150px;
           background-color: rgba(0, 0, 0, 0.6); }
           body header .header-wrapper .site-nav .menu-header-container ul {
-            height: inherit;
             display: inline-block;
             width: 100%;
             margin: 0 auto;
             padding: 0;
             text-align: center; }
             body header .header-wrapper .site-nav .menu-header-container ul li {
-              margin: 0;
               padding: 0;
               display: block; }
+              body header .header-wrapper .site-nav .menu-header-container ul li a {
+                padding: .3rem 0 .3rem 0;
+                display: block; }
+              body header .header-wrapper .site-nav .menu-header-container ul li:hover a {
+                color: white; }
               body header .header-wrapper .site-nav .menu-header-container ul li:last-child {
                 margin-right: 0; }
           body header .header-wrapper .site-nav .menu-header-container.show {

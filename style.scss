@@ -772,29 +772,37 @@ body {
 
 						//LIST OF NAVIGATION START
 						.menu-header-container{
-							font-size: 16px;
+							font-size: 1rem;
 							vertical-align: top;
-							height: inherit;
 							width: 100%;
 							display:none;
+                            height:13.5rem;
 							text-align: right;
-							height: 150px;
 							background-color: $header-background-color;
-							ul{ 
-								height: inherit;
+							ul{
 								display: inline-block;
 								width: 100%;
 								margin:0 auto;
 								padding:0;
 								text-align: center;
 								li{
-									margin:0;
 									padding: 0;
 									display: block;
+                                    a{
+                                      padding:.3rem 0 .3rem 0;
+                                      display: block;
+                                    }
+
+                                    &:hover{
+                                      a{
+                                        color:white;
+                                      }
+                                    }
 									&:last-child{
 										margin-right: 0;
 									}
 								}
+
 							}
 							&.show{
 								display: block;
