@@ -58,8 +58,8 @@
 
                 <div id="number-container">
                     <ul class="list">
-                        <li><a href="tel:+46703121337">NollKIT journummer: 0703-12 1337</a></li>
-                        <li><a href="tel:+46317723927">Kårens trygghetsjour: 031-772 39 27</a></li>
+                        <li><a href="tel:+46703121337">NollKIT journummer: <i class="fa fa-phone-square"></i><span> 0703 12 1337</span></a></li>
+                        <li><a href="tel:+46317723927">Kårens journummer: <i class="fa fa-phone-square"></i><span> 031-772 3927</span></a></li>
                     </ul>
                 </div>
 

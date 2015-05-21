@@ -160,6 +160,12 @@ body {
 						display: inline-block;
 						a{
 							color: white;
+                            i{
+                               display: none;
+                             }
+                            span{
+                                display: inline-block;
+                            }
 						}
 					
 					}
@@ -698,10 +704,12 @@ body {
 //-------------------------------------START MAX-WIDTH 660px-----------------------------
 @media screen and (max-width: 660px){
 	body{
+
 		//HEADER START
 		header {
             height: 12em;
 			background-repeat: no-repeat;
+
 				//HEADER WRAPPER START
 				.header-wrapper{
 					z-index: 10;	
@@ -709,6 +717,7 @@ body {
 					width: 100%;
                     height:3em;
                     background-color:transparent;
+
 					//NAVIGATION START
 					.site-nav {
 						height: 100%;
@@ -720,6 +729,7 @@ body {
 							text-align: left;
 							background-color:transparent;
                             height:100%;
+
 							//LOGO CONTAINER
 							#logo-container{
 								margin-left: 3%;
@@ -809,13 +819,24 @@ body {
 					ul{
                         width: 100%;
 						text-align: center;
+
 						li{
                             vertical-align: middle;
-                            display: inline-block;
-							width: 49%;
+                            float:left;
+							width: 50%;
+                            &:last-child{
+                              float:right;
+                            }
 							a{
-								font-size: 0.55rem;
+								font-size: 0.9rem;
                                 white-space: normal;
+                                i{
+                                    
+                                    display:inline-block;
+                                }
+                                span{
+                                    display: none;
+                                }
 							}
 						}
 					}

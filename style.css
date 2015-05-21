@@ -100,6 +100,10 @@ body {
             display: inline-block; }
             body header #contact-container #number-container ul li a {
               color: white; }
+              body header #contact-container #number-container ul li a i {
+                display: none; }
+              body header #contact-container #number-container ul li a span {
+                display: inline-block; }
       body header #contact-container .fb-like {
         margin-top: 1.0075px;
         position: relative;
@@ -431,11 +435,17 @@ body {
           text-align: center; }
           body header #contact-container #number-container ul li {
             vertical-align: middle;
-            display: inline-block;
-            width: 49%; }
+            float: left;
+            width: 50%; }
+            body header #contact-container #number-container ul li:last-child {
+              float: right; }
             body header #contact-container #number-container ul li a {
-              font-size: 0.55rem;
+              font-size: 0.9rem;
               white-space: normal; }
+              body header #contact-container #number-container ul li a i {
+                display: inline-block; }
+              body header #contact-container #number-container ul li a span {
+                display: none; }
   body .content-container {
     margin: 1% 1% 0 1%; }
     body .content-container .scheme-page-container {
