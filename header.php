@@ -35,7 +35,7 @@
         </script>
 
 
-        <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit15.jpg);">
+        <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit15_cropped.jpg);">
             <div class="header-wrapper">
                 <nav class="site-nav">
                     <div id="logo-button-wrapper">
@@ -58,8 +58,8 @@
 
                 <div id="number-container">
                     <ul class="list">
-                        <li><a href="tel:+46703121337">NollKIT journummer: 0703-12 1337<a></li>
-                        <li><a href="tel:+46317723927">Kårens trygghetsjour: 031-772 39 27<a></li>
+                        <li><a href="tel:+46703121337">NollKIT journummer: 0703-12 1337</a></li>
+                        <li><a href="tel:+46317723927">Kårens trygghetsjour: 031-772 39 27</a></li>
                     </ul>
                 </div>
 
