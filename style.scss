@@ -33,7 +33,6 @@ $border-radius:0.15em;
 
 
 
-
 body {
 	font-family: $standard-font;
 	color: $text-color;
@@ -62,82 +61,54 @@ body {
             position: relative;
             background: no-repeat center center;
             background-size: cover;
-			//HEADER WRAPPER START
-			.header-wrapper{
-                padding-top: 1em;
-				height: 4.5em;
-				//NAVIGATION START
-				.site-nav {
-                    height: inherit;
-					background-color: $header-background-color; // ÄNDRA SENARE
-					font-size:0; // To remove whitespace between inline-blocks
-                    width: 100%;
-					#logo-button-wrapper{
-						font-size: 0;
-						height: inherit;
-						width: 300px;
-						display: inline-block;
-						//LOGO CONTAINER
-						#logo-container{
-							margin-left: 5%;
-							height: inherit;
-							width: 300px;
-							display: inline-block;
-							a{
-								height: inherit;
-								#logo{
-									height: inherit;
-									width: 100%;
-								}
-							}
-						}
-						//LOGO CONTAINER END
+            padding-top: 1rem;
+            .top-bar{
 
-						//MOBILE-HAMBURGER-CONTAINER START
-						#mobile-hamburger-container{
-							display:none;
-						}
-						//HAMBURGER-CONTAINER END
-					}	
-					//LIST OF NAVIGATION START
-					.menu-header-container{
-						float: right;
-						font-size: 16px;
-						vertical-align: top;
-						height: inherit;
-						width: 67%;
-						display: inline-block;
-						text-align: right;
-						height: inherit;
-						ul{
-							display: inline-block;
-							width: 100%;
-							margin:0;
-							padding:0;
-							li{
-								margin:0 5px;
-								padding: 24.5px 0;
-								display: inline-block;
-								a{
-									color:$text-color; // ÄNDRA SENARE
-									text-decoration: none;
-									padding: inherit;
-									font-size: 1.1em;
-									&:hover{
-										color: $text-hover-color; // ÄNDRA SENARE
-									}
-								}
-								&:last-child{
-									margin-right: 5%;
-								}
-							}
-						}
-					}
-					//LIST OF NAVIGATION END
-				}
-				//NAVIGATION END
-			} 
-			//HEADER WRAPPER ENDS
+              background-color: $header-background-color;
+              width:100%;
+                #mobile-menu-container{
+                   display:none
+                 }
+                #logo-and-mobile-wrapper{
+                  margin-left:2%;
+                  width: 18%;
+                  display: inline-block;
+                    #logo-container{
+                      a{
+                        text-decoration: none;
+                        img {
+                          height: 5rem;
+                        }
+                      }
+                    }
+                  #mobile-hamburger-container{
+                     display:none;
+                  }
+
+              }
+              #desktop-menu-container{
+                vertical-align: top;
+                margin-right:2%;
+                width: 77%;
+                display: inline-block;
+                ul{
+
+                  text-align: right;
+
+                  li{
+                    margin:0 .3125rem 0 .3125rem;
+                    padding:2.0625rem 0 2.0625rem 0;
+                    display: inline-block;
+                    &.current_page_item{
+                      color:white;
+                    }
+
+                  }
+
+                }
+              }
+
+            }
 
 		//CONTACT-CONTAINER START	
 		#contact-container{
@@ -148,6 +119,7 @@ body {
 			height: 1.5em;
 			#number-container {
 				width: 60%;
+              margin-left: 2%;
 				display: inline-block;
 				float: left;
 				height: inherit;
@@ -155,7 +127,7 @@ body {
 					text-align: left;
 					height: inherit;
 					li{
-						margin-left: 2%;
+
 						height: inherit;
 						display: inline-block;
 						a{
@@ -498,76 +470,42 @@ body {
 		header {
             height: 21em;
 			padding-top: 0;
-				//HEADER WRAPPER START
-				.header-wrapper{
-                    height: 8.5em;
-                    padding-top: 0;
-                    background-color:$header-background-color;
-					//NAVIGATION START
-					.site-nav {
-                        background-color:transparent;
-                        height: 100%;
-						//Logo together with buttons for mobile wrapper start.
-						#logo-button-wrapper{
-							text-align: center;
-							font-size: 0;
-							width: 100%;
-                            height: 50%;
-							//LOGO CONTAINER
-							#logo-container{
-								margin:0 auto;
-								height:100%;
-								width: 300px;
-								display: block;
-							}
-							//LOGO CONTAINER END
+            .top-bar{
+                background-color: $header-background-color;
+                #mobile-menu-container{
+                  display: none;
+                }
+                #logo-and-mobile-wrapper{
+                  width:100%;
+                  #logo-container{
+                    width: 100%;
+                    text-align: center;
+                    a{
+                      img{
+                        height:5rem;
+                      }
+                    }
+                  }
+                  #mobile-hamburger-container{
+                    display:none;
+                  }
+                }
+                #desktop-menu-container{
+                  width:100%;
+                  display:block;
+                  ul{
+                    text-align: center;
+                    li{
+                      display:inline-block;
+                      padding:1rem .3rem;
+                      a{
 
-							//MOBILE-HAMBURGER-CONTAINER START
-							#mobile-hamburger-container{
-								display:none;
-							}
-							//HAMBURGER-CONTAINER END
-						}
-						//End logo together with mobile buttons.
+                      }
+                    }
+                  }
+                }
+            }
 
-						//LIST OF NAVIGATION START
-						.menu-header-container{
-                            background-color:transparent;
-							width: 100%;
-							display:block;
-							text-align: right;
-							height: 50%;
-							ul{
-								height: inherit;
-								display: inline-block;
-								width: 100%;
-								margin:0 auto;
-								padding:0;
-								text-align: center;
-								li{
-									margin: 0 5px;
-									padding: 24.5px 0;
-									display: inline-block;
-									a{
-										color:$text-color; // ÄNDRA SENARE
-										text-decoration: none;
-										padding: inherit;
-										font-size: 1.1em;
-										&:hover{
-											color: $text-hover-color; // ÄNDRA SENARE
-										}
-									}
-									&:last-child{
-										margin-right: 5px;
-									}
-								}
-							}
-						}
-						//LIST OF NAVIGATION END
-					}
-					//NAVIGATION END
-				} 
-				//HEADER WRAPPER ENDS
 				
 			//Contact container starts		
 			#contact-container{
@@ -576,6 +514,7 @@ body {
 
 				//Journummer and MK number container
 				#number-container{
+                    margin-left:0;
 					width: 100%;
 					ul{
 						text-align: center;
@@ -587,15 +526,10 @@ body {
 				}
 				//End number container
 
-				//Fb like button
-				.fb-like {
-					display: none;
-				}
-
-				//Twitter button
-				iframe{
-					display:none;
-				}
+                //Twitter and FB
+                #social-media-container{
+                  display:none;
+                }
 			}
 			//Contact container ends	
 		}
@@ -707,115 +641,88 @@ body {
 
 		//HEADER START
 		header {
+            background-position: center center;
+            background-size: cover;
             height: 12em;
 			background-repeat: no-repeat;
+            .top-bar{
+                width: 100%;
+                background-color: $header-background-color;
+                position: absolute;
+                z-index: 100;
+                .menu-header-container{
+                    background-color: $header-background-color;
+                    display: none;
+                    ul{
+                      margin:0;
+                      padding:0;
+                      list-style-type: none;
+                        li{
+                            text-align:center;
+                            &.current_page_item{
+                              a{
+                                color:white;
+                              }
+                            }
+                            a{
+                                padding:.5rem 0 .5rem 0;
+                                display: block;
+                                width: 100%;
+                                text-decoration: none;
+                                color:gray;
+                                &:hover{
+                                  color:white;
+                                }
+                            }
+                        }
+                    }
+                }
 
-				//HEADER WRAPPER START
-				.header-wrapper{
-					z-index: 10;	
-					position: fixed;
-					width: 100%;
-                    height:3em;
-                    background-color:transparent;
+                #logo-and-mobile-wrapper{
+                    width: 96%;
+                    height: 3rem;
+                    margin: 0 2% 0 2%;
+                    #logo-container{
+                        width: 160px;
+                        float:left;
+                        height: inherit;
+                        a{
+                          img{
+                              height: 3rem;
+                          }
+                        }
+                    }
+                    #mobile-hamburger-container{
+                      display:block;
+                      height: 3rem;
+                      float:right;
+                        button{
+                            height: inherit;
+                            background-color: transparent;
+                            border: none;
+                            color: gray;
+                            i{
+                              font-size: 2rem;
+                            }
+                            &:hover{
+                              color: white;
+                            }
+                            &#cross{
+                              display: none;
+                            }
+                        }
+                    }
+                }
+                #desktop-menu-container{
+                  display: none;
+                }
 
-					//NAVIGATION START
-					.site-nav {
-						height: 100%;
-						background-color:$header-background-color;
+            }
 
-						//Logo together with buttons for mobile, wrapper start.
-						#logo-button-wrapper{	
-							display:block;
-							text-align: left;
-							background-color:transparent;
-                            height:100%;
 
-							//LOGO CONTAINER
-							#logo-container{
-								margin-left: 3%;
-								width: 200px;
-								background-color: transparent;
-								display: inline-block;
-							}
-							//LOGO CONTAINER END
 
-							//MOBILE-HAMBURGER-CONTAINER START
-							#mobile-hamburger-container{
-								display:inline-block;
-								width: 15%;
-								height: 100%;
-								vertical-align: top;
-								background-color: transparent;
-								float: right;
-								&:hover{
-									button{
 
-										color:white;
-									}
-								}
-								button{
-									padding:0;
-									height: inherit;
-									background-color:transparent;
-									color:$text-color;
-									border:none;
-                                    font-size: 2rem;
-									width: 100%;
-									&#cross{
-										display: none;
-									}
-								}
-							}
-							//HAMBURGER-CONTAINER END
-						}
-						//End logo and button wrapper
-
-						//LIST OF NAVIGATION START
-						.menu-header-container{
-							font-size: 1rem;
-							vertical-align: top;
-							width: 100%;
-							display:none;
-                            height:13.5rem;
-							text-align: right;
-							background-color: $header-background-color;
-							ul{
-								display: inline-block;
-								width: 100%;
-								margin:0 auto;
-								padding:0;
-								text-align: center;
-								li{
-									padding: 0;
-									display: block;
-                                    a{
-                                      padding:.3rem 0 .3rem 0;
-                                      display: block;
-                                    }
-
-                                    &:hover{
-                                      a{
-                                        color:white;
-                                      }
-                                    }
-									&:last-child{
-										margin-right: 0;
-									}
-								}
-
-							}
-							&.show{
-								display: block;
-							}
-						}
-						//LIST OF NAVIGATION END
-						
-					}
-					//NAVIGATION END
-				} 
-				//HEADER WRAPPER ENDS
-
-			//Contact container starts		
+			//Contact container starts
 			#contact-container{
 				position: absolute;bottom:0;
 				text-align: center;
@@ -839,7 +746,7 @@ body {
 								font-size: 0.9rem;
                                 white-space: normal;
                                 i{
-                                    
+
                                     display:inline-block;
                                 }
                                 span{
@@ -850,8 +757,13 @@ body {
 					}
 				}
 				//End number container
+
+                //Twitter and FB
+                #social-media-container{
+                  display:none;
+                }
 			}
-			//Contact container ends	
+			//Contact container ends
 		}
 		//HEADER END
 
