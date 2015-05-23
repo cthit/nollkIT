@@ -36,22 +36,36 @@
 
 
         <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit15_cropped.jpg);">
-            <div class="header-wrapper">
-                <nav class="site-nav">
-                    <div id="logo-button-wrapper">
-                        <div id="logo-container">
-                            <a href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/top_logo.png"></a>
-                        </div>
-                        <div id="mobile-hamburger-container">
-                            <button style="button" id="hamburger"><i class="fa fa-bars"></i></button>
-                            <button style="button" id="cross"><i class="fa fa-times"></i></button>
-                        </div>
+            <div class="top-bar">
+
+                <?php
+                    $args = array(
+                        'theme_location' => 'header',
+                        'menu_class' => 'list',
+                        'container_id' => 'mobile-menu-container'
+                        );
+                    wp_nav_menu( $args );
+                ?>
+
+                <div id="logo-and-mobile-wrapper">
+                    <div id="logo-container">
+                        <a href="/"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/top_logo.png"></a>
                     </div>
-                    <?php
-                        $args = array('theme_location' => 'header');
-                    ?>
-                    <?php wp_nav_menu( $args ); ?>
-                </nav>
+                    <div id="mobile-hamburger-container">
+                        <button style="button" id="hamburger"><i class="fa fa-bars"></i></button>
+                        <button style="button" id="cross"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+
+                <?php
+                $args = array(
+                    'theme_location' => 'header',
+                    'menu_class' => 'list',
+                    'container_id' => 'desktop-menu-container'
+                );
+                wp_nav_menu( $args );
+                ?>
+
             </div>
 
             <div id="contact-container">
@@ -63,16 +77,12 @@
                     </ul>
                 </div>
 
-                <div class="fb-like" data-href="https://www.facebook.com/NollKIT?fref=ts"
-                    data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" >
+                <div id="social-media-container">
+                    <div class="fb-like" data-href="https://www.facebook.com/NollKIT?fref=ts"
+                        data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" >
+                    </div>
+                    <a href="https://twitter.com/NollKIT" class="twitter-follow-button" data-show-count="false">Follow @NollKIT</a>
                 </div>
-                        <a href="https://twitter.com/NollKIT" class="twitter-follow-button" data-show-count="false">Follow @NollKIT</a>
-                <!--
-                <div id="youtube">
-                    <script src="https://apis.google.com/js/platform.js"></script>
-                    <div class="g-ytsubscribe" data-channel="GoogleDevelopers"></div>
-                </div>
-                -->
             </div>
 
         </header>
