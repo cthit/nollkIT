@@ -213,11 +213,13 @@ body {
 						background-color: $post-header-background-color;
 						border-top-left-radius: $border-radius;
 						border-top-right-radius: $border-radius;
-						cursor:pointer;
 						text-align:center;
 						color:$post-header-text-color;
 						height: 2.5em;
 						background-image: none;
+                        &.faq-header{
+                          cursor:pointer;
+                        }
 					}
 
                     .image-container{

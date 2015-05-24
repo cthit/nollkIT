@@ -129,11 +129,12 @@ body {
             background-color: #005a7d;
             border-top-left-radius: 0.15em;
             border-top-right-radius: 0.15em;
-            cursor: pointer;
             text-align: center;
             color: white;
             height: 2.5em;
             background-image: none; }
+            body .content-container .posts-container .post article .post-header-container.faq-header {
+              cursor: pointer; }
           body .content-container .posts-container .post article .image-container {
             width: 100%;
             text-align: center; }

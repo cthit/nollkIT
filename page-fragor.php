@@ -10,7 +10,7 @@
 			?>
 						<section class="post">
 							<article>
-								<header class="post-header-container">
+								<header class="post-header-container faq-header">
 									<p><?php the_title(); ?></p>
 								</header>
 								<div class="post-content-container faq">
