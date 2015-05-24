@@ -239,9 +239,18 @@ body {
 						height: 2.5em;
 						background-image: none;
 					}
+
+                    .image-container{
+                      width: 100%;
+                      text-align: center;
+                      img{
+                        width:100%;
+                      }
+                    }
+
 					//Content container for every pot
 					.post-content-container{
-						padding:0 3% 0 3%;	
+						padding:0 3% 2% 3%;
 						margin:0;
 							iframe{
 								width: 100%;

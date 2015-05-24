@@ -144,8 +144,13 @@ body {
             color: white;
             height: 2.5em;
             background-image: none; }
+          body .content-container .posts-container .post article .image-container {
+            width: 100%;
+            text-align: center; }
+            body .content-container .posts-container .post article .image-container img {
+              width: 100%; }
           body .content-container .posts-container .post article .post-content-container {
-            padding: 0 3% 0 3%;
+            padding: 0 3% 2% 3%;
             margin: 0; }
             body .content-container .posts-container .post article .post-content-container iframe {
               width: 100%; }
