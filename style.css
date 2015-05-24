@@ -118,16 +118,6 @@ body {
     body .content-container .posts-container {
       margin: 0 auto;
       width: 60%; }
-      body .content-container .posts-container.phaddergroup {
-        width: 80%;
-        text-align: center; }
-        body .content-container .posts-container.phaddergroup .post {
-          display: inline-block;
-          width: 46%; }
-          body .content-container .posts-container.phaddergroup .post article {
-            margin: 2%; }
-        body .content-container .posts-container.phaddergroup.leader .post {
-          width: 94%; }
       body .content-container .posts-container .post {
         color: black; }
         body .content-container .posts-container .post article {
@@ -294,6 +284,8 @@ body {
     width: 90%; }
   body .content-container.declaration {
     margin: 0 12%; }
+  body .content-container #group-points {
+    display: none; }
   body .content-container #scheme-daily {
     float: none;
     width: 86%;
@@ -301,12 +293,6 @@ body {
   body .content-container .posts-container {
     display: block;
     width: 90%; }
-    body .content-container .posts-container.phaddergroup {
-      width: 90%; }
-      body .content-container .posts-container.phaddergroup .post {
-        width: 100%; }
-      body .content-container .posts-container.phaddergroup.leader .post {
-        width: 100%; }
   body .site-footer #wrapper #sektionen {
     width: 100%; }
   body .site-footer #wrapper #good-links1 {
@@ -410,12 +396,6 @@ body {
       width: 96%; }
     body .content-container .posts-container {
       width: 100%; }
-      body .content-container .posts-container.phaddergroup {
-        width: 100%;
-        text-align: center; }
-        body .content-container .posts-container.phaddergroup .post {
-          display: inline-block;
-          width: 100%; }
   body .site-footer #wrapper .lots-of-links#sektionen {
     width: 100%; }
     body .site-footer #wrapper .lots-of-links#sektionen h3 {
