@@ -91,7 +91,7 @@ body {
   body .content-container {
     margin: 1% 2% 0 2%; }
     body .content-container.declaration {
-      margin: 0 25%; }
+      margin: 2% 25%; }
       body .content-container.declaration iframe {
         width: 100%; }
     body .content-container .scheme-page-container {
@@ -284,7 +284,7 @@ body {
   body .content-container .scheme-page-container {
     width: 90%; }
   body .content-container.declaration {
-    margin: 0 12%; }
+    margin: 2% 12%; }
   body .content-container #group-points {
     display: none; }
   body .content-container #scheme-daily {
@@ -390,7 +390,7 @@ body {
         margin: 0;
         width: 100%; }
     body .content-container.declaration {
-      margin: 3% 2%; }
+      margin: 3% 0; }
       body .content-container.declaration iframe {
         width: 100%; }
     body .content-container #scheme-daily {
