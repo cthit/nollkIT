@@ -1,74 +1,28 @@
-<?php 
+<?php
 	get_header();
 ?>
 	<div class="content-container">
-		<div class="posts-container phaddergroup">
+		<div class="posts-container">
 
-			<!-- QUERY POSTS FOR GROUPS -->
-			<?php
-				query_posts('category_name=phaddergrupper&showposts=8');
-				if (have_posts()) : 
-					while (have_posts()) : the_post(); 
-			?>
-						<section class="post">
-							<article>
-								<header class="post-header-container">
-									<p><?php the_title(); ?></p>
-								</header>
-								<div class="post-content-container">
-									<?php the_content(); ?>
-								</div>
-								<footer class="post-footer-container">
-									<ul>
-										<li><?php echo get_the_date(); ?></li>
-										<li><?php echo get_the_time(); ?></li>
-										<li>Created by: <?php echo get_the_author(); ?></li>
-									</ul>
-								</footer>
-							</article>	
-						</section>
-			<?php
-					endwhile;
-				else : 
-					echo '<p> No content found </p>' ;
-				endif;
-			?>
+            <?php
+                $amountOfGroups=8;
+                for($i = 1;$i<=$amountOfGroups;++$i){
+            ?>
+                    <section class="post ">
+                        <article>
+                            <header class="post-header-container">
+                                <?php the_field('phaddergruppstitel_' . $i); ?>
+                            </header>
+                            <div class="post-content-container">
+                                <?php the_field('phaddergruppsmedlemmar_' . $i); ?>
+                            </div>
+                        </article>
+                    </section>
+            <?php
+                }
+            ?>
 
 		</div>
-		<div class="posts-container phaddergroup leader">
-	
-			<!--  QUERY POSTS FOR GROUPLEADERS -->
-
-			<?php
-				query_posts('category_name=phaddergruppschef&showposts=8');
-				if (have_posts()) : 
-					while (have_posts()) : the_post(); 
-			?>
-						<section class="post">
-							<article>
-								<header class="post-header-container">
-									<p><?php the_title(); ?></p>
-								</header>
-								<div class="post-content-container">
-									<?php the_content(); ?>
-								</div>
-								<footer class="post-footer-container">
-									<ul>
-										<li><?php echo get_the_date(); ?></li>
-										<li><?php echo get_the_time(); ?></li>
-										<li>Created by: <?php echo get_the_author(); ?></li>
-									</ul>
-								</footer>
-							</article>	
-						</section>
-			<?php
-					endwhile;
-				else : 
-					echo '<p> No content found </p>' ;
-				endif;
-			?>
-
-		</div>		
 	</div>
 <?php
 	get_footer();

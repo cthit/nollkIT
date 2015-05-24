@@ -199,26 +199,6 @@ body {
 			margin:0 auto;
 			width: 60%;
 
-			//Post container for phaddergroups(who's in what group, name of grp etc.)
-			&.phaddergroup {
-				width: 80%;
-				text-align: center;
-				.post{
-					display: inline-block;
-					width: 46%;	
-					article {
-						margin:2%;
-					}
-
-				}
-				&.leader{
-					.post{
-						width: 94%;
-					}
-				}
-			}
-			//End phaddergroup
-
 			//Every Post uses this container
 			.post{
 				color: $post-text-color;
@@ -559,6 +539,10 @@ body {
 			}
 			//declaration container end.
 
+            #group-points{
+              display: none;
+            }
+
 			//daily scheme on index.php container
 			#scheme-daily {
 				float: none;
@@ -571,20 +555,6 @@ body {
 			.posts-container{
 				display: block;
 				width: 90%;
-
-				//Special phaddergroup posts look
-				&.phaddergroup {
-					width: 90%;
-					.post{
-						width: 100%;	
-					}
-					&.leader{
-						.post{
-							width: 100%;
-						}
-					}
-				}
-				//end phaddergroup posts
 			}
 			//end normal posts container
 		}
@@ -808,17 +778,6 @@ body {
 			//All normal posts container.
 			.posts-container{
 				width: 100%;
-
-				//Special phaddergroup posts look
-				&.phaddergroup {
-					width: 100%;
-					text-align: center;
-					.post{
-						display: inline-block;
-						width: 100%;	
-					}
-				}
-				//end phaddergroup posts
 			}
 			//end normal posts container
 		}
