@@ -4,14 +4,18 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.3.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
+        <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.css' />
+        <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/lib/jquery.min.js'></script>
+        <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/lib/moment.min.js'></script>
+        <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.js'></script>
+        <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/fullcalendar/gcal.js'></script>
 
 		<!--Här under läggs den heliga nollbrickan till bara så du vet -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/nollbricka.png" />
 
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/font-awesome/css/font-awesome.min.css">
-		
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 	</head>
