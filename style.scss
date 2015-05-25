@@ -188,11 +188,37 @@ body {
 				}
 			}
 		}
-		#scheme-daily{
+		.scheme-daily{
+          display: inline-block;
+          #calendar{
+              background-color: white;
+              .fc-view-container{
+                background-color: white;
+              }
+              .fc-toolbar{
+                .fc-left{
+                  width:100%;
+                  text-align: center;
+                  h2{
+                    float:none;
+                  }
+                }
+                .fc-right{
+                  width:100%;
+                  text-align: center;
+                  button{
+                    float:none;
+                  }
+                  .fc-button-group{
+                    float:none;
+                  }
+                }
+              }
+          }
 			text-align: center;
 			float: right;
 			width: 20%;
-			height: 400px
+
 		}
 		//ALL POSTS USE THIS CONTAINER
 		.posts-container{
@@ -546,7 +572,8 @@ body {
             }
 
 			//daily scheme on index.php container
-			#scheme-daily {
+			.scheme-daily {
+                display: block;
 				float: none;
 				width: 86%;
 				margin:0 auto;
@@ -772,7 +799,7 @@ body {
 			//Declaration container end
 
 			//daily scheme on index.php container
-			#scheme-daily {
+			.scheme-daily {
 				width: 96%;
 			}
 			//end scheme daily
