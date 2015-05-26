@@ -8,6 +8,8 @@ $(document).ready(function(){
         defaultView: 'agendaDay',
         background:'#005a7d',
         height:'auto',
+        axisFormat: 'HH:mm',
+
 
         //Adding google calendar
         googleCalendarApiKey: 'AIzaSyDCATKfyvhKbKMaBYJqKQvWS6jMf7VAyuY',
