@@ -9,7 +9,7 @@ $(document).ready(function(){
         background:'#005a7d',
         height:'auto',
         axisFormat: 'HH:mm',
-
+        minTime: '06:00:00',
 
         //Adding google calendar
         googleCalendarApiKey: 'AIzaSyDCATKfyvhKbKMaBYJqKQvWS6jMf7VAyuY',
