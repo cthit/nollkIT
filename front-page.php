@@ -32,7 +32,7 @@ get_header();
         </div>
     </div>
 
-    <div class="posts-container">
+    <div class="posts-container first-page">
         <?php
         query_posts('category_name=startsida&showposts=5');
         if (have_posts()) :

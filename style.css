@@ -89,7 +89,7 @@ body {
         vertical-align: middle;
         margin-right: 3%; }
   body .content-container {
-    margin: 1% 2% 0 2%; }
+    margin: 1% 1% 0 1%; }
     body .content-container.declaration {
       margin: 2% 25%; }
       body .content-container.declaration iframe {
@@ -139,6 +139,8 @@ body {
     body .content-container .posts-container {
       margin: 0 auto;
       width: 60%; }
+      body .content-container .posts-container.first-page {
+        width: 58%; }
       body .content-container .posts-container .post {
         color: black; }
         body .content-container .posts-container .post article {
@@ -325,6 +327,8 @@ body {
   body .content-container .posts-container {
     display: block;
     width: 90%; }
+    body .content-container .posts-container.first-page {
+      width: 90%; }
   body .site-footer #wrapper #sektionen {
     width: 100%; }
   body .site-footer #wrapper #good-links1 {
@@ -425,9 +429,11 @@ body {
       body .content-container.declaration iframe {
         width: 100%; }
     body .content-container .scheme-daily {
-      width: 96%; }
+      width: 100%; }
     body .content-container .posts-container {
       width: 100%; }
+      body .content-container .posts-container.first-page {
+        width: 100%; }
   body .site-footer #wrapper .lots-of-links#sektionen {
     width: 100%; }
     body .site-footer #wrapper .lots-of-links#sektionen h3 {
