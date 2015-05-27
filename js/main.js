@@ -8,6 +8,14 @@ $(document).ready(function(){
         defaultView: 'agendaDay',
         background:'#005a7d',
         height:'auto',
+        axisFormat: 'HH:mm',
+        minTime: '06:00:00',
+        header: {
+            left: 'title',
+            center: 'prev,next',
+            right: 'today,agendaDay,agendaWeek'
+        },
+        eventColor:'red',
 
         //Adding google calendar
         googleCalendarApiKey: 'AIzaSyDCATKfyvhKbKMaBYJqKQvWS6jMf7VAyuY',
