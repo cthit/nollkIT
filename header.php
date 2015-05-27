@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
         <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.css' />
+        <link media="print" rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.print.css' />
         <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/lib/jquery.min.js'></script>
         <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/lib/moment.min.js'></script>
         <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.js'></script>
