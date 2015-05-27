@@ -160,7 +160,7 @@ body {
 
 	//START CONTENT
 	.content-container{
-		margin:1% 2% 0 2%;
+		margin:1% 1% 0 1%;
 		&.declaration{
 			margin: 2% 25%;
 			iframe{
@@ -229,7 +229,9 @@ body {
 		.posts-container{
 			margin:0 auto;
 			width: 60%;
-
+            &.first-page{
+              width:58%;
+            }
 			//Every Post uses this container
 			.post{
 				color: $post-text-color;
@@ -602,6 +604,9 @@ body {
 			.posts-container{
 				display: block;
 				width: 90%;
+                &.first-page{
+                  width:90%;
+                }
 			}
 			//end normal posts container
 		}
@@ -818,13 +823,16 @@ body {
 
 			//daily scheme on index.php container
 			.scheme-daily {
-				width: 96%;
+				width: 100%;
 			}
 			//end scheme daily
 
 			//All normal posts container.
 			.posts-container{
 				width: 100%;
+                &.first-page{
+                  width:100%;
+                }
 			}
 			//end normal posts container
 		}
