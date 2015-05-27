@@ -18,7 +18,7 @@ $(document).ready(function(){
         eventColor:'red',
 
         //Adding google calendar
-        googleCalendarApiKey: 'AIzaSyDCATKfyvhKbKMaBYJqKQvWS6jMf7VAyuY',
+        googleCalendarApiKey: 'AIzaSyB_Wg0GSQzonzJTeMGT0r6PfSEk81aGRms',
         events: {
             googleCalendarId: 'vsslnmoph2ae1se32drhd92psc@group.calendar.google.com'
         }
