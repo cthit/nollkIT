@@ -16,13 +16,16 @@ get_header();
 <div class="content-container">
 
     <div id="group-points">
+        <h3>Nuvarande ställning</h3>
         <ul class="list">
-            <li>Lag 1: 50</li>
-            <li>Lag 2: 50</li>
-            <li>Lag 3: 50</li>
-            <li>Lag 4: 50</li>
-            <li>Lag 5: 50</li>
-            <li>Lag 6: 50</li>
+            <li><?php the_field('grupp_1') ?></li>
+            <li><?php the_field('grupp_2') ?></li>
+            <li><?php the_field('grupp_3') ?></li>
+            <li><?php the_field('grupp_4') ?></li>
+            <li><?php the_field('grupp_5') ?></li>
+            <li><?php the_field('grupp_6') ?></li>
+            <li><?php the_field('grupp_7') ?></li>
+            <li><?php the_field('grupp_8') ?></li>
         </ul>
     </div>
 
