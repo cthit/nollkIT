@@ -193,10 +193,7 @@ body {
 		.scheme-daily{
           display: inline-block;
           #calendar{
-              background-color: white;
-              .fc-view-container{
-                background-color: white;
-              }
+            background-color: white;
               .fc-toolbar{
                 .fc-left{
                   display:block;
@@ -218,6 +215,9 @@ body {
                     float:none;
                   }
                 }
+              }
+              #arrow-container{
+                display:none;
               }
           }
 			text-align: center;
@@ -595,8 +595,22 @@ body {
 			.scheme-daily {
                 display: block;
 				float: none;
-				width: 86%;
+				width: 90%;
 				margin:0 auto;
+                #calendar{
+                  #arrow-container{
+                    display:block;
+                    text-align:center;
+                    padding-bottom: 1rem;
+                    .arrow{
+                      font-size: 2rem;
+                      color:#000000;
+                    }
+                    #arrow-up{
+                      display:none;
+                    }
+                  }
+                }
 			}
 			//end scheme daily
 

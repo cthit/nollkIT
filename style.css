@@ -119,8 +119,6 @@ body {
       width: 20%; }
       body .content-container .scheme-daily #calendar {
         background-color: white; }
-        body .content-container .scheme-daily #calendar .fc-view-container {
-          background-color: white; }
         body .content-container .scheme-daily #calendar .fc-toolbar .fc-left {
           display: block;
           width: 100%;
@@ -136,6 +134,8 @@ body {
             float: none; }
           body .content-container .scheme-daily #calendar .fc-toolbar .fc-right .fc-button-group {
             float: none; }
+        body .content-container .scheme-daily #calendar #arrow-container {
+          display: none; }
     body .content-container .posts-container {
       margin: 0 auto;
       width: 60%; }
@@ -322,8 +322,17 @@ body {
   body .content-container .scheme-daily {
     display: block;
     float: none;
-    width: 86%;
+    width: 90%;
     margin: 0 auto; }
+    body .content-container .scheme-daily #calendar #arrow-container {
+      display: block;
+      text-align: center;
+      padding-bottom: 1rem; }
+      body .content-container .scheme-daily #calendar #arrow-container .arrow {
+        font-size: 2rem;
+        color: #000000; }
+      body .content-container .scheme-daily #calendar #arrow-container #arrow-up {
+        display: none; }
   body .content-container .posts-container {
     display: block;
     width: 90%; }
