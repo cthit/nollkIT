@@ -20,10 +20,6 @@
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td>Sova sova sova!</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
                                     <td>Mottagningsverksamhet</td>
                                 </tr>
                             </table>
