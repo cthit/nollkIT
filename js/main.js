@@ -42,7 +42,7 @@ $(document).ready(function(){
 
         eventClick: function(calEvent, jsEvent, view) {
             showModalPanel(calEvent);
-            changeAccordingToSize();
+            changeModalPanelAccordingToSize();
         }
     });
 
@@ -70,8 +70,19 @@ $(document).ready(function(){
             setModalPanelSize(40,60);
         }
     };
-    //Ran when script launched
-    changeAccordingToSize();
+
+    var changeModalPanelAccordingToSize = function(){
+        if (screenWidth <= 660) {
+            setModalPanelSize(95,70);
+        } else if (screenWidth <= 960) {
+            setModalPanelSize(60,40);
+        } else {
+            setModalPanelSize(40,60);
+        }
+    }
+
+
+
 
     //If resize calls changeAccordingToSize with the new screenWidth
     $(window).resize(function(){
@@ -118,4 +129,8 @@ $(document).ready(function(){
 		}		
 	});
 	//MOBILE ON HAMBURGER CLICK END
+
+    //Run when script launched
+    changeAccordingToSize();
+    changeModalPanelAccordingToSize();
 });
