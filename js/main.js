@@ -42,7 +42,7 @@ $(document).ready(function(){
 
         eventClick: function(calEvent, jsEvent, view) {
             showModalPanel(calEvent);
-            setModalPanelSize(40,60);
+            changeAccordingToSize();
         }
     });
 
