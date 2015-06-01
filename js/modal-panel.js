@@ -11,15 +11,23 @@ $(document).ready(function(){
         }
     });
 
-    //Update 
+    //Update
     window.updateModalPanel = function(calendarEvent){
         $('#cover-screen-container').fadeIn();
         $('.calendar-popup').fadeIn();
         $('#modal-panel-title').text(calendarEvent.title);
-        $('#where-when-how-list').find('#where').text("Var? " + calendarEvent.location);
+        if (typeof calendarEvent.location === "undefined") {
+            $('#where-when-how-list').find('#where').text("Var? " + "...NollKIT har inte fyllt i något");
+        } else {
+            $('#where-when-how-list').find('#where').text("Var? " + calendarEvent.location);
+        }
+        if (typeof calendarEvent.description === "undefined") {
+            $('#where-when-how-list').find('#what').text("Vad? " + "...NollKIT har inte fyllt i något");
+        } else {
+            $('#where-when-how-list').find('#what').text("Vad? " + calendarEvent.description);
+        }
         $('#where-when-how-list').find('#when').text(
             "När? " + calendarEvent.start.format("h:mm") + " - " + calendarEvent.end.format("h:mm"));
-        $('#where-when-how-list').find('#what').text("Vad? " + calendarEvent.description);
     };
 
     var closeModalPanel = function(){

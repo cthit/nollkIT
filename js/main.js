@@ -2,8 +2,6 @@ $(document).ready(function(){
 
     //<------------FullCalendar stuff---------------->
 
-
-
     // GLÖM INTE ATT LÄGGA TILL REFERENS PÅ NYA SIDAN SEDAN! GOOGLE DEV KOLLA
     // http://fullcalendar.io/docs/google_calendar/
     $('#calendar').fullCalendar({
@@ -30,7 +28,7 @@ $(document).ready(function(){
                 color: 'red'
             },
             {
-                googleCalendarId: 'hgbrg.se_8qmmgd79sepo90rpha5dqdva6o@group.calendar.google.com',
+                googleCalendarId: 'oscar.evertsson@gmail.com',
                 color: 'green'
 
             }
@@ -48,8 +46,6 @@ $(document).ready(function(){
 
 
     //<------------FullCalendar stuff end---------------->
-
-
 
 
     //Variable for the screen size
