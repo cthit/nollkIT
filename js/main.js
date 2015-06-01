@@ -12,13 +12,24 @@ $(document).ready(function(){
             center: 'prev,next',
             right: 'today,agendaDay,agendaWeek'
         },
-        eventColor:'red',
 
         //Adding google calendar
-        googleCalendarApiKey: 'AIzaSyB_Wg0GSQzonzJTeMGT0r6PfSEk81aGRms',
-        events: {
-            googleCalendarId: 'vsslnmoph2ae1se32drhd92psc@group.calendar.google.com'
-        }
+        googleCalendarApiKey: 'AIzaSyANyLE-2J-xzUl1S9s2eSx-kmBkbjR_q10',
+        eventSources: [
+            {
+                googleCalendarId: 'hgbrg.se_m4teg8n1lqlhf8n9es3gt4q6b4@group.calendar.google.com',
+                color: 'blue'
+            },
+            {
+                googleCalendarId: 'hgbrg.se_di8440endk6j5g7smmqv533buk@group.calendar.google.com',
+                color: 'red'
+            },
+            {
+                googleCalendarId: 'hgbrg.se_8qmmgd79sepo90rpha5dqdva6o@group.calendar.google.com',
+                color: 'green'
+
+            }
+        ]
     });
     //Adds the arrows to the fullCalendar
     $('.fc-toolbar').after('<div id="arrow-container">' +
