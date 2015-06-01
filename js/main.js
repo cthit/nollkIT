@@ -59,15 +59,14 @@ $(document).ready(function(){
     var screenWidth = $(window).width();
     //Changes the view depending on what breakpoint
     var changeAccordingToSize = function(){
+        resetShowHideSchedual();
+        changeModalPanelAccordingToSize();
         if (screenWidth <= 660) {
             $('.fc-view-container').css({"display": "none"});
-            setModalPanelSize(95,70);
         } else if (screenWidth <= 960) {
             $('.fc-view-container').css({"display": "none"});
-            setModalPanelSize(60,40);
         } else {
             $('.fc-view-container').css({"display": "block"});
-            setModalPanelSize(40,60);
         }
     };
 
@@ -79,6 +78,11 @@ $(document).ready(function(){
         } else {
             setModalPanelSize(40,60);
         }
+    }
+
+    var resetShowHideSchedual = function() {
+        $('#arrow-up').css({'display':'none'});
+        $('#arrow-down').css({'display':'block'});
     }
 
 
