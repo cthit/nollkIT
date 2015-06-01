@@ -35,7 +35,8 @@ $(document).ready(function(){
         $('#where-when-how-list').find('#when').text(
             "När? " + calendarEvent.start.format("h:mm") + " - " + calendarEvent.end.format("h:mm"));
 
-        $('#where-when-how-list').find('#event-url').text(calendarEvent.url);
+        //Sets the url
+        $('#where-when-how-list').find('#event-url').attr('href',calendarEvent.url);
     };
 
     //If for instance you want to change the model panel size to 40% width and 60% height call setModalPanelSize(40,60)

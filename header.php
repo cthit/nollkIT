@@ -32,7 +32,7 @@
                 <li id="where">Var? Hubben 2.1</li>
                 <li id="when">När? xxx</li>
                 <li id="what">Vad? xxx</li>
-                <li id="event-url"></li>
+                <li ><a id="event-url" target="_blank" >Öppna detta event i google calendar <i class="fa fa-calendar"></i></a></li>
             </ul>
         </div>
 
