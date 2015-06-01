@@ -26,12 +26,13 @@
     <div id="cover-screen-container"></div>
     <div class="calendar-popup">
         <button id="close-modal-panel"><i class="fa fa-times"></i></button>
-        <h2 id="modal-panel-title">Title</h2>
+        <h3 id="modal-panel-title">Title</h3>
         <div id="modal-panel-content-container">
             <ul class="list" id="where-when-how-list">
                 <li id="where">Var? Hubben 2.1</li>
                 <li id="when">När? xxx</li>
                 <li id="what">Vad? xxx</li>
+                <li id="event-url"></li>
             </ul>
         </div>
 

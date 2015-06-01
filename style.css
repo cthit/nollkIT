@@ -24,6 +24,7 @@ body {
       body .list a:hover {
         color: white; }
   body #cover-screen-container {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -33,19 +34,14 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     /*dim the background*/ }
   body .calendar-popup {
-    width: 300px;
-    height: 200px;
+    display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -150px;
     background-color: white;
     border-radius: 5px;
     text-align: center;
     z-index: 11;
     /* 1px higher than the overlay layer */ }
-    body .calendar-popup h2 {
+    body .calendar-popup h3 {
       line-height: 0; }
     body .calendar-popup ul {
       padding: 5%;

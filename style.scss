@@ -58,6 +58,7 @@ body {
 
 
     #cover-screen-container{
+      display:none;
       position: absolute;
       top: 0;
       left: 0;
@@ -68,18 +69,13 @@ body {
     }
 
     .calendar-popup{
-        width: 300px;
-        height: 200px;
+        display:none;
         position: fixed;
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -150px;
         background-color: white;
         border-radius: 5px;
         text-align: center;
         z-index: 11; /* 1px higher than the overlay layer */
-        h2{
+        h3{
           line-height:0;
         }
         ul{

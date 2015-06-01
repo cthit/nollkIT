@@ -34,8 +34,15 @@ $(document).ready(function(){
             }
         ],
 
+        eventRender: function(event, element) {
+            element.on('click', function (e) {
+                e.preventDefault();
+            });
+        },
+
         eventClick: function(calEvent, jsEvent, view) {
-            updateModalPanel(calEvent);
+            showModalPanel(calEvent);
+            setModalPanelSize(40,60);
         }
     });
 
@@ -52,10 +59,15 @@ $(document).ready(function(){
     var screenWidth = $(window).width();
     //Changes the view depending on what breakpoint
     var changeAccordingToSize = function(){
-        if(screenWidth <= 960){
+        if (screenWidth <= 660) {
             $('.fc-view-container').css({"display": "none"});
+            setModalPanelSize(95,70);
+        } else if (screenWidth <= 960) {
+            $('.fc-view-container').css({"display": "none"});
+            setModalPanelSize(60,40);
         } else {
             $('.fc-view-container').css({"display": "block"});
+            setModalPanelSize(40,60);
         }
     };
     //Ran when script launched
