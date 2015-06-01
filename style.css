@@ -8,6 +8,7 @@ Version: 1.0
   font-family: "blissful-thinking";
   src: url("fonts/BlissfulThinking.otf"); }
 body {
+  position: relative;
   font-family: Arial;
   color: gray;
   background-color: #00ABE3;
@@ -22,6 +23,46 @@ body {
       color: inherit; }
       body .list a:hover {
         color: white; }
+  body #cover-screen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*dim the background*/ }
+  body .calendar-popup {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11;
+    /* 1px higher than the overlay layer */ }
+    body .calendar-popup h2 {
+      line-height: 0; }
+    body .calendar-popup ul {
+      padding: 5%;
+      text-align: left; }
+      body .calendar-popup ul li {
+        font-size: 1rem; }
+    body .calendar-popup #close-modal-panel {
+      position: absolute;
+      border: none;
+      top: 0;
+      right: 0;
+      background-color: transparent; }
+      body .calendar-popup #close-modal-panel .fa-times {
+        font-size: 2rem;
+        color: gray; }
+      body .calendar-popup #close-modal-panel:hover .fa-times {
+        color: black; }
   body header {
     height: 28em;
     position: relative;

@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    //<------------FullCalendar stuff---------------->
+
+
+
     // GLÖM INTE ATT LÄGGA TILL REFERENS PÅ NYA SIDAN SEDAN! GOOGLE DEV KOLLA
     // http://fullcalendar.io/docs/google_calendar/
     $('#calendar').fullCalendar({
@@ -14,7 +19,7 @@ $(document).ready(function(){
         },
 
         //Adding google calendar
-        googleCalendarApiKey: 'AIzaSyANyLE-2J-xzUl1S9s2eSx-kmBkbjR_q10',
+        googleCalendarApiKey: 'AIzaSyCdQiVw9Zn9QnuHD_u8T9HKkkaw2PtfQoQ',
         eventSources: [
             {
                 googleCalendarId: 'hgbrg.se_m4teg8n1lqlhf8n9es3gt4q6b4@group.calendar.google.com',
@@ -29,12 +34,23 @@ $(document).ready(function(){
                 color: 'green'
 
             }
-        ]
+        ],
+
+        eventClick: function(calEvent, jsEvent, view) {
+            updateModalPanel(calEvent);
+        }
     });
+
     //Adds the arrows to the fullCalendar
     $('.fc-toolbar').after('<div id="arrow-container">' +
     '<i id="arrow-down" class="fa fa-chevron-down arrow"></i>' +
     '<i id="arrow-up" class="fa fa-chevron-up arrow"></i></div>');
+
+
+    //<------------FullCalendar stuff end---------------->
+
+
+
 
     //Variable for the screen size
     var screenWidth = $(window).width();

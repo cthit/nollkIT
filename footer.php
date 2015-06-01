@@ -81,7 +81,9 @@
 			<?php wp_nav_menu( $args ); ?>
 		</nav>	
 	</footer>
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/modal-panel.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
+
 	<?php wp_footer(); ?>
 </body>
 </html>
