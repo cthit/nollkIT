@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    //<------------FullCalendar stuff---------------->
+
     // GLÖM INTE ATT LÄGGA TILL REFERENS PÅ NYA SIDAN SEDAN! GOOGLE DEV KOLLA
     // http://fullcalendar.io/docs/google_calendar/
     $('#calendar').fullCalendar({
@@ -13,8 +16,9 @@ $(document).ready(function(){
             right: 'today,agendaDay,agendaWeek'
         },
 
-        //Adding google calendar
-        googleCalendarApiKey: 'AIzaSyANyLE-2J-xzUl1S9s2eSx-kmBkbjR_q10',
+        /* Adding google calendar. There's no way of getting around adding the API key (confirmed with Rekoil). */
+
+        googleCalendarApiKey: 'AIzaSyCdQiVw9Zn9QnuHD_u8T9HKkkaw2PtfQoQ',
         eventSources: [
             {
                 googleCalendarId: 'hgbrg.se_m4teg8n1lqlhf8n9es3gt4q6b4@group.calendar.google.com',
@@ -29,25 +33,61 @@ $(document).ready(function(){
                 color: 'green'
 
             }
-        ]
+        ],
+
+        eventRender: function(event, element) {
+            element.on('click', function (e) {
+                e.preventDefault();
+            });
+        },
+
+        eventClick: function(calEvent, jsEvent, view) {
+            showModalPanel(calEvent);
+            changeModalPanelAccordingToSize();
+        }
     });
+
     //Adds the arrows to the fullCalendar
     $('.fc-toolbar').after('<div id="arrow-container">' +
     '<i id="arrow-down" class="fa fa-chevron-down arrow"></i>' +
     '<i id="arrow-up" class="fa fa-chevron-up arrow"></i></div>');
 
+
+    //<------------FullCalendar stuff end---------------->
+
+
     //Variable for the screen size
     var screenWidth = $(window).width();
     //Changes the view depending on what breakpoint
     var changeAccordingToSize = function(){
-        if(screenWidth <= 960){
+        resetShowHideSchedual();
+        changeModalPanelAccordingToSize();
+        if (screenWidth <= 660) {
+            $('.fc-view-container').css({"display": "none"});
+        } else if (screenWidth <= 960) {
             $('.fc-view-container').css({"display": "none"});
         } else {
             $('.fc-view-container').css({"display": "block"});
         }
     };
-    //Ran when script launched
-    changeAccordingToSize();
+
+    var changeModalPanelAccordingToSize = function(){
+        if (screenWidth <= 660) {
+            setModalPanelSize(95,70);
+        } else if (screenWidth <= 960) {
+            setModalPanelSize(60,40);
+        } else {
+            setModalPanelSize(40,60);
+        }
+    }
+
+    var resetShowHideSchedual = function() {
+        $('#arrow-up').css({'display':'none'});
+        $('#arrow-down').css({'display':'block'});
+    }
+
+
+
 
     //If resize calls changeAccordingToSize with the new screenWidth
     $(window).resize(function(){
@@ -94,4 +134,8 @@ $(document).ready(function(){
 		}		
 	});
 	//MOBILE ON HAMBURGER CLICK END
+
+    //Run when script launched
+    changeAccordingToSize();
+    changeModalPanelAccordingToSize();
 });

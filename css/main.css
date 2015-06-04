@@ -1,4 +1,3 @@
-
 .site-header {
   height: 28em;
   position: relative;
@@ -286,204 +285,264 @@ iframe {
   font-family: "blissful-thinking";
   src: url("../fonts/BlissfulThinking.otf"); }
 body {
-  font-family: Arial;
+  font-family: Arial !important;
   color: gray;
   background-color: #00ABE3;
   margin: 0;
+  padding: 0;
+  position: relative; }
+
+.list {
+  list-style-type: none;
+  margin: 0;
   padding: 0; }
-  body .list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    body .list a {
-      text-decoration: none;
-      color: inherit; }
-    body .list a:hover {
-      color: white; }
-  body .content-container {
-    margin: 1% 1% 0 1%;
-    overflow: auto; }
-    @media screen and (max-width: 660px) {
-      body .content-container {
-        margin: 1% 1% 0 1%; } }
-  body .content-container.declaration {
-    margin: 2% 25%; }
-    body .content-container.declaration iframe {
-      width: 100%; }
-    @media screen and (max-width: 960px) {
-      body .content-container.declaration {
-        margin: 2% 12%; } }
-    @media screen and (max-width: 660px) {
-      body .content-container.declaration {
-        margin: 3% 0; }
-        body .content-container.declaration iframe {
-          width: 100%; } }
-  body #scheme-page-container {
-    float: none;
-    display: block;
-    width: 58%;
-    margin: 1% auto; }
-    body #scheme-page-container iframe {
-      width: 96%;
-      margin: 1% 2% 0 2%; }
-    @media screen and (max-width: 960px) {
-      body #scheme-page-container {
-        width: 90%; } }
-    @media screen and (max-width: 660px) {
-      body #scheme-page-container {
-        width: 100%; }
-        body #scheme-page-container iframe {
-          margin: 0;
-          width: 100%; } }
-  body #group-points {
-    background-color: #005a7d;
-    border-radius: 0.15em;
-    float: left;
-    width: 20%;
-    text-align: center; }
-    body #group-points ul {
-      text-align: left; }
-    body #group-points li {
-      padding: 0.7em 2em; }
-    @media screen and (max-width: 960px) {
-      body #group-points {
-        display: none; } }
-  body #calendar {
-    background-color: white;
-    text-align: center;
-    float: right;
-    width: 100%; }
-    body #calendar .fc-toolbar .fc-left {
-      display: block;
-      width: 100%;
-      text-align: center; }
-      body #calendar .fc-toolbar .fc-left h2 {
-        float: none; }
-    body #calendar .fc-toolbar .fc-right {
-      padding: 1rem 0 1rem 0;
-      display: block;
-      width: 100%;
-      text-align: center; }
-      body #calendar .fc-toolbar .fc-right button {
-        float: none; }
-      body #calendar .fc-toolbar .fc-right .fc-button-group {
-        float: none; }
-  body #arrow-container {
-    display: none; }
-    @media screen and (max-width: 960px) {
-      body #arrow-container {
-        display: block;
-        text-align: center;
-        padding-bottom: 1rem; } }
-  @media screen and (max-width: 960px) {
-    body .arrow {
-      font-size: 2rem;
-      color: #000000; } }
-  @media screen and (max-width: 960px) {
-    body #arrow-up {
-      display: none; } }
-  body .posts-container {
-    margin: 0 auto;
-    width: 58%; }
-    @media screen and (max-width: 960px) {
-      body .posts-container {
-        display: block;
-        width: 90%; } }
-    @media screen and (max-width: 660px) {
-      body .posts-container {
-        width: 100%; } }
-  body .posts-container.first-page {
-    width: 58%; }
-    @media screen and (max-width: 960px) {
-      body .posts-container.first-page {
-        width: 90%; } }
-    @media screen and (max-width: 660px) {
-      body .posts-container.first-page {
-        width: 100%; } }
-  body .post {
+  .list a {
+    text-decoration: none;
+    color: inherit; }
+  .list a:hover {
+    color: white; }
+
+#cover-screen-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*dim the background*/ }
+
+.calendar-popup {
+  display: none;
+  position: fixed;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 11;
+  /* 1px higher than the overlay layer */ }
+  .calendar-popup h3 {
+    line-height: 0; }
+  .calendar-popup ul {
+    padding: 5%;
+    text-align: left; }
+  .calendar-popup li {
+    font-size: 1rem; }
+  .calendar-popup a:hover {
     color: black; }
-    body .post article {
-      border-radius: 0.15em;
-      background-color: white;
-      width: 100%;
-      margin: 0 0 1% 0; }
-    body .post .post-header-container {
-      border-top-left-radius: 0.15em;
-      border-top-right-radius: 0.15em;
-      text-align: center;
-      color: white;
-      height: 2.5em;
-      background: #005a7d none;
-      margin-top: 0; }
-      body .post .post-header-container p {
-        margin-top: 0; }
-      body .post .post-header-container.faq-header {
-        cursor: pointer; }
-    body .post .image-container {
-      width: 100%;
-      text-align: center; }
-      body .post .image-container img {
-        width: 100%; }
-  body .post-content-container {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 3% 2% 3%;
-    margin: 0; }
-    body .post-content-container p {
-      margin: 0;
-      -webkit-margin-before: 0;
-      -webkit-margin-after: 0;
+
+#close-modal-panel {
+  position: absolute;
+  border: none;
+  top: 0;
+  right: 0;
+  background-color: transparent; }
+  #close-modal-panel .fa-times {
+    font-size: 2rem;
+    color: gray; }
+
+#close-modal-panel:hover .fa-times {
+  color: black; }
+
+.content-container {
+  margin: 1% 1% 0 1%;
+  overflow: auto; }
+  @media screen and (max-width: 660px) {
+    .content-container {
+      margin: 1% 1% 0 1%; } }
+
+.content-container.declaration {
+  margin: 2% 25%; }
+  .content-container.declaration iframe {
+    width: 100%; }
+  @media screen and (max-width: 960px) {
+    .content-container.declaration {
+      margin: 2% 12%; } }
+  @media screen and (max-width: 660px) {
+    .content-container.declaration {
+      margin: 3% 0; }
+      .content-container.declaration iframe {
+        width: 100%; } }
+
+#scheme-page-container {
+  float: none;
+  display: block;
+  width: 58%;
+  margin: 1% auto; }
+  #scheme-page-container iframe {
+    width: 96%;
+    margin: 1% 2% 0 2%; }
+  @media screen and (max-width: 960px) {
+    #scheme-page-container {
+      width: 90%; } }
+  @media screen and (max-width: 660px) {
+    #scheme-page-container {
       width: 100%; }
-    body .post-content-container img {
-      max-width: 100%; }
-    body .post-content-container iframe {
-      width: 100%; }
-    body .post-content-container.faq {
-      display: none; }
-      body .post-content-container.faq.show {
-        display: block; }
-  body #scheme {
+      #scheme-page-container iframe {
+        margin: 0;
+        width: 100%; } }
+
+#group-points {
+  background-color: #005a7d;
+  border-radius: 0.15em;
+  float: left;
+  width: 20%;
+  text-align: center; }
+  #group-points ul {
+    text-align: left; }
+  #group-points li {
+    padding: 0.7em 2em; }
+  @media screen and (max-width: 960px) {
+    #group-points {
+      display: none; } }
+
+#calendar {
+  background-color: white;
+  text-align: center;
+  float: right;
+  width: 100%; }
+  #calendar .fc-toolbar .fc-left {
+    display: block;
     width: 100%;
     text-align: center; }
-    body #scheme tr {
-      text-align: left; }
-    body #scheme tr:first-child td:first-child {
-      background-color: red;
-      height: 50px;
-      width: 5%; }
-    body #scheme tr:nth-child(2) td:first-child {
-      background-color: green;
-      height: 50px;
-      width: 5%; }
-    body #scheme tr:nth-child(3) td:first-child {
-      background-color: blue;
-      height: 50px;
-      width: 5%; }
-    body #scheme tr:nth-child(4) td:first-child {
-      background-color: blue;
-      height: 50px;
-      width: 5%; }
-  body .post-footer-container {
+    #calendar .fc-toolbar .fc-left h2 {
+      float: none; }
+  #calendar .fc-toolbar .fc-right {
+    padding: 1rem 0 1rem 0;
+    display: block;
+    width: 100%;
+    text-align: center; }
+    #calendar .fc-toolbar .fc-right button {
+      float: none; }
+    #calendar .fc-toolbar .fc-right .fc-button-group {
+      float: none; }
+
+#arrow-container {
+  display: none; }
+  @media screen and (max-width: 960px) {
+    #arrow-container {
+      display: block;
+      text-align: center;
+      padding-bottom: 1rem; } }
+
+@media screen and (max-width: 960px) {
+  .arrow {
+    font-size: 2rem;
+    color: #000000; } }
+
+@media screen and (max-width: 960px) {
+  #arrow-up {
+    display: none; } }
+
+.posts-container {
+  margin: 0 auto;
+  width: 58%; }
+  @media screen and (max-width: 960px) {
+    .posts-container {
+      display: block;
+      width: 90%; } }
+  @media screen and (max-width: 660px) {
+    .posts-container {
+      width: 100%; } }
+
+.posts-container.first-page {
+  width: 58%; }
+  @media screen and (max-width: 960px) {
+    .posts-container.first-page {
+      width: 90%; } }
+  @media screen and (max-width: 660px) {
+    .posts-container.first-page {
+      width: 100%; } }
+
+.post {
+  color: black; }
+  .post article {
+    border-radius: 0.15em;
+    background-color: white;
+    width: 100%;
+    margin: 0 0 1% 0; }
+  .post .post-header-container {
+    border-top-left-radius: 0.15em;
+    border-top-right-radius: 0.15em;
     text-align: center;
-    font-size: 0.7em;
-    color: black;
-    background-color: 49372;
-    border-bottom-right-radius: 0.15em;
-    border-bottom-left-radius: 0.15em; }
-    body .post-footer-container ul {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      list-style-type: none; }
-    body .post-footer-container li {
-      display: inline-block;
-      width: 31%; }
-    body .post-footer-container li:first-child {
-      text-align: left;
-      padding-left: 1%; }
-    body .post-footer-container li:last-child {
-      text-align: right;
-      padding-right: 1%; }
+    color: white;
+    height: 2.5em;
+    background: #005a7d none;
+    margin-top: 0; }
+    .post .post-header-container p {
+      margin-top: 0; }
+    .post .post-header-container.faq-header {
+      cursor: pointer; }
+  .post .image-container {
+    width: 100%;
+    text-align: center; }
+    .post .image-container img {
+      width: 100%; }
+
+.post-content-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 3% 2% 3%;
+  margin: 0; }
+  .post-content-container p {
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    width: 100%; }
+  .post-content-container img {
+    max-width: 100%; }
+  .post-content-container iframe {
+    width: 100%; }
+  .post-content-container.faq {
+    display: none; }
+    .post-content-container.faq.show {
+      display: block; }
+
+#scheme {
+  width: 100%;
+  text-align: center; }
+  #scheme tr {
+    text-align: left; }
+  #scheme tr:first-child td:first-child {
+    background-color: red;
+    height: 50px;
+    width: 5%; }
+  #scheme tr:nth-child(2) td:first-child {
+    background-color: green;
+    height: 50px;
+    width: 5%; }
+  #scheme tr:nth-child(3) td:first-child {
+    background-color: blue;
+    height: 50px;
+    width: 5%; }
+  #scheme tr:nth-child(4) td:first-child {
+    background-color: blue;
+    height: 50px;
+    width: 5%; }
+
+.post-footer-container {
+  text-align: center;
+  font-size: 0.7em;
+  color: black;
+  background-color: 49372;
+  border-bottom-right-radius: 0.15em;
+  border-bottom-left-radius: 0.15em; }
+  .post-footer-container ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  .post-footer-container li {
+    display: inline-block;
+    width: 31%; }
+  .post-footer-container li:first-child {
+    text-align: left;
+    padding-left: 1%; }
+  .post-footer-container li:last-child {
+    text-align: right;
+    padding-right: 1%; }
 
 .scheme-daily {
   display: block;

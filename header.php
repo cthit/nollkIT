@@ -21,7 +21,22 @@
 		<?php wp_head(); ?>
 	</head>
 
-    <body <?php body_class(); ?>>
+    <body class="body">
+
+    <div id="cover-screen-container"></div>
+    <div class="calendar-popup">
+        <button id="close-modal-panel"><i class="fa fa-times"></i></button>
+        <h3 id="modal-panel-title">Title</h3>
+        <div id="modal-panel-content-container">
+            <ul class="list" id="where-when-how-list">
+                <li id="where">Var? Hubben 2.1</li>
+                <li id="when">När? xxx</li>
+                <li id="what">Vad? xxx</li>
+                <li ><a id="event-url" target="_blank" >Öppna detta event i google calendar <i class="fa fa-calendar"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
 
         <script>(function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
@@ -38,6 +53,8 @@
             {js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}
             }(document, 'script', 'twitter-wjs');
         </script>
+
+
 
 
         <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit15_cropped.jpg);">
