@@ -16,7 +16,8 @@ $(document).ready(function(){
             right: 'today,agendaDay,agendaWeek'
         },
 
-        //Adding google calendar
+        /* Adding google calendar. There's no way of getting around adding the API key (confirmed with Rekoil). */
+
         googleCalendarApiKey: 'AIzaSyCdQiVw9Zn9QnuHD_u8T9HKkkaw2PtfQoQ',
         eventSources: [
             {
@@ -28,7 +29,7 @@ $(document).ready(function(){
                 color: 'red'
             },
             {
-                googleCalendarId: 'oscar.evertsson@gmail.com',
+                googleCalendarId: 'hgbrg.se_8qmmgd79sepo90rpha5dqdva6o@group.calendar.google.com',
                 color: 'green'
 
             }

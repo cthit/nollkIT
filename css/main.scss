@@ -29,14 +29,14 @@ $sleep-table-color:yellow;
 $reception-table-color:blue;
 $border-radius:0.15em;
 
-
-
-body {
-  font-family: $standard-font;
+body{
+  font-family: $standard-font !important;
   color: $text-color;
   background-color: $background-color;
   margin: 0;
   padding: 0;
+  position: relative;
+}
 
   //Most ul:s uses this class to bring the basic style of ul:s.
   .list {
@@ -59,8 +59,10 @@ body {
   #cover-screen-container{
     display:none;
     position: absolute;
-    top: 0;
+    top:0;
+    bottom: 0;
     left: 0;
+    right:0;
     width: 100%;
     height: 100%;
     z-index: 10;
@@ -77,34 +79,33 @@ body {
     h3{
       line-height:0;
     }
-    ul{
+    ul {
       padding: 5%;
       text-align: left;
-      li{
-        font-size: 1rem;
-        a{
-          &:hover{
-            color:black;
-          }
-        }
-      }
     }
-    #close-modal-panel{
-      position: absolute;
-      border:none;
-      top:0;
-      right:0;
-      background-color: transparent;
-      .fa-times{
-        font-size:2rem;
-        color:gray;
-      }
-      &:hover{
-        .fa-times{
-          color:black;
-        }
-      }
+    li {
+      font-size: 1rem;
     }
+    a:hover{
+      color:black;
+    }
+  }
+
+  #close-modal-panel{
+    position: absolute;
+    border:none;
+    top:0;
+    right:0;
+    background-color: transparent;
+
+    .fa-times{
+      font-size:2rem;
+      color:gray;
+    }
+  }
+
+  #close-modal-panel:hover .fa-times{
+    color:black;
   }
 
   //START CONTENT
@@ -397,7 +398,7 @@ body {
       padding-right: 1%;
     }
   }
-}
+
 //END POST FOOTER
 
 

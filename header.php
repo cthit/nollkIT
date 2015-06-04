@@ -21,7 +21,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-    <body>
+    <body class="body">
 
     <div id="cover-screen-container"></div>
     <div class="calendar-popup">
