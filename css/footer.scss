@@ -1,0 +1,131 @@
+//Constants
+$standard-font:Arial;
+$background-color:#00ABE3;
+$footer-background-color:rgba(0,0,0,0.8);
+$header-background-color:rgba(0,0,0,0.6);
+$underlying-banner-color:rgba(0,0,0,0.4);
+$post-background-color:white;
+$post-header-background-color:#005a7d;
+$post-header-text-color:white;
+$post-footer-background-color:049372;
+$post-footer-text-color:black;
+$post-text-color:black;
+$text-hover-color:white;
+$text-color:gray;
+$mandatory-table-color:red;
+$lecture-table-color:green;
+$sleep-table-color:yellow;
+$reception-table-color:blue;
+$border-radius:0.15em;
+
+
+//Site footer start
+.site-footer {
+  margin-top: 1em;
+  font-size: 0.7em;
+  width: 100%;
+  padding: 1em 0;
+  background-color: $footer-background-color;
+
+  //Wrapper start
+  #wrapper {
+    font-size: 0;
+    width: 100%;
+  }
+}
+
+//common class for the 3x section elements in the footer.
+.lots-of-links {
+  display: inline-block;
+  width: 33.333333%;
+  font-size: 12px;
+  h3 {
+    font-size: 18.7px;
+    text-align: center;
+  }
+}
+
+//Target specially the container for the sektionen related information.
+#sektionen {
+  font-size: 0;
+
+  ul {
+    font-size: 12px;
+    display: inline-block;
+    width: 47.5%;
+    padding-left: 2.5%;
+
+    &#name-of-compounds {
+      width: 47.5%;
+      text-align: right;
+      padding-right: 2.5%;
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+      width: 100%;
+  }
+
+  @media screen and (max-width: 660px){
+    width: 100%;
+    h3{
+      font-size: 15px;
+    }
+    ul{
+      font-size: 10px;
+    }
+  }
+}
+
+
+//end sektionen.
+
+//Common class for the 2x "good links" slits.
+.good-links {
+  ul {
+    font-size: 12px;
+    li {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    display:none;
+  }
+}
+//End lots-of-links
+
+
+
+.menu-footer-container {
+  text-align: center;
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    margin-top: 1em;
+    margin-left: 1%;
+    display: inline-block;
+    padding: 3px 10px;
+  }
+
+  li:hover a{
+    color: $text-hover-color;
+  }
+
+  a {
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 0.8em;
+  }
+}
+
+
+
+
+
+
+

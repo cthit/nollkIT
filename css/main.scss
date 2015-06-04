@@ -1,0 +1,423 @@
+
+
+@import "header";
+@import "footer";
+
+@font-face{
+  font-family: "blissful-thinking";
+  src: url('../fonts/BlissfulThinking.otf');
+}
+
+
+//Constants
+$standard-font:Arial;
+$background-color:#00ABE3;
+$footer-background-color:rgba(0,0,0,0.8);
+$header-background-color:rgba(0,0,0,0.6);
+$underlying-banner-color:rgba(0,0,0,0.4);
+$post-background-color:white;
+$post-header-background-color:#005a7d;
+$post-header-text-color:white;
+$post-footer-background-color:049372;
+$post-footer-text-color:black;
+$post-text-color:black;
+$text-hover-color:white;
+$text-color:gray;
+$mandatory-table-color:red;
+$lecture-table-color:green;
+$sleep-table-color:yellow;
+$reception-table-color:blue;
+$border-radius:0.15em;
+
+
+
+body {
+  font-family: $standard-font;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+
+  //Most ul:s uses this class to bring the basic style of ul:s.
+  .list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover{
+      color: white;
+    }
+  }
+  //End List
+
+
+  #cover-screen-container{
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.8); /*dim the background*/
+  }
+
+  .calendar-popup{
+    display:none;
+    position: fixed;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+    h3{
+      line-height:0;
+    }
+    ul{
+      padding: 5%;
+      text-align: left;
+      li{
+        font-size: 1rem;
+        a{
+          &:hover{
+            color:black;
+          }
+        }
+      }
+    }
+    #close-modal-panel{
+      position: absolute;
+      border:none;
+      top:0;
+      right:0;
+      background-color: transparent;
+      .fa-times{
+        font-size:2rem;
+        color:gray;
+      }
+      &:hover{
+        .fa-times{
+          color:black;
+        }
+      }
+    }
+  }
+
+  //START CONTENT
+  .content-container {
+    margin: 1% 1% 0 1%;
+    overflow: auto;
+    @media screen and (max-width: 660px){
+      margin: 1% 1% 0 1%;
+    }
+
+  }
+
+  .content-container.declaration {
+    margin: 2% 25%;
+
+    iframe {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 960px) {
+      margin: 2% 12%;
+    }
+
+    @media screen and (max-width: 660px){
+      margin: 3% 0;
+
+      iframe{
+        width: 100%;
+      }
+    }
+  }
+
+  #scheme-page-container {
+    float: none;
+    display: block;
+    width: 58%;
+    margin: 1% auto;
+
+    iframe {
+      width: 96%;
+      margin: 1% 2% 0 2%;
+    }
+
+    @media screen and (max-width: 960px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 660px){
+      width: 100%;
+
+      iframe{
+        margin:0;
+        width: 100%;
+      }
+    }
+  }
+
+  #group-points {
+    background-color: $post-header-background-color;
+    border-radius: $border-radius;
+    float: left;
+    width: 20%;
+    text-align: center;
+
+    ul {
+      text-align: left;
+    }
+
+    li {
+      padding: 0.7em 2em;
+    }
+
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
+  }
+
+  //The damn calendar.... It's a mess.. I know nothing to do about it...
+  #calendar {
+    background-color: white;
+    text-align: center;
+    float: right;
+    width: 100%;
+
+    .fc-toolbar {
+      .fc-left {
+        display: block;
+        width: 100%;
+        text-align: center;
+        h2 {
+          float: none;
+        }
+      }
+      .fc-right {
+        padding: 1rem 0 1rem 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        button {
+          float: none;
+        }
+        .fc-button-group {
+          float: none;
+        }
+      }
+    }
+  }
+  //end messy calendar...
+
+  #arrow-container {
+    display: none;
+
+    @media screen and (max-width: 960px) {
+      display: block;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .arrow {
+
+    @media screen and (max-width: 960px) {
+      font-size: 2rem;
+      color: #000000;
+    }
+  }
+
+  #arrow-up {
+
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
+  }
+
+  //ALL POSTS USE THIS CONTAINER
+  .posts-container {
+    margin: 0 auto;
+    width: 58%;
+
+    @media screen and (max-width: 960px) {
+      display: block;
+      width: 90%;
+    }
+
+    @media screen and (max-width: 660px){
+      width: 100%;
+    }
+  }
+
+  .posts-container.first-page {
+    width: 58%;
+
+    @media screen and (max-width: 960px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 660px){
+      width:100%;
+    }
+  }
+
+  //Every Post uses this container
+  .post {
+    color: $post-text-color;
+
+    //Article for every post
+    article {
+      border-radius: $border-radius;
+      background-color: $post-background-color;
+      width: 100%;
+      margin: 0 0 1% 0;
+    }
+
+    //Header of every post.
+    .post-header-container {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      text-align: center;
+      color: $post-header-text-color;
+      height: 2.5em;
+      background: $post-header-background-color none;
+      margin-top: 0;
+      p{
+        margin-top: 0;
+      }
+      &.faq-header {
+        cursor: pointer;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  //Content container for every pot
+  .post-content-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 3% 2% 3%;
+    margin: 0;
+
+    p {
+      margin: 0;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+    }
+    //Content for FAQ
+    &.faq {
+      display: none;
+      &.show {
+        display: block
+      }
+    }
+    //End content for FAQ
+  }
+
+  //Content container for scheme
+  #scheme {
+    width: 100%;
+    text-align: center;
+    tr {
+      text-align: left;
+    }
+    tr:first-child td:first-child {
+      background-color: $mandatory-table-color;
+      height: 50px;
+      width: 5%;
+    }
+
+    tr:nth-child(2) td:first-child {
+      background-color: $lecture-table-color;
+      height: 50px;
+      width: 5%;
+    }
+    tr:nth-child(3) td:first-child {
+      background-color: $reception-table-color;
+      height: 50px;
+      width: 5%;
+    }
+
+    tr:nth-child(4) td:first-child {
+      background-color: $reception-table-color;
+      height: 50px;
+      width: 5%;
+    }
+  }
+  //End content container for scheme
+
+  // Post footer container start
+  .post-footer-container {
+    text-align: center;
+    font-size: 0.7em;
+    color: $post-footer-text-color;
+    background-color: $post-footer-background-color;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none
+    }
+    li {
+      display: inline-block;
+      width: 31%;
+    }
+
+    li:first-child {
+      text-align: left;
+      padding-left: 1%;
+    }
+
+    li:last-child {
+      text-align: right;
+      padding-right: 1%;
+    }
+  }
+}
+//END POST FOOTER
+
+
+
+//daily scheme on index.php container
+.scheme-daily {
+  display: block;
+  text-align: center;
+  float: right;
+  width: 20%;
+  overflow:auto;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+    float: none;
+    width: 90%;
+    margin: 0 auto 1% auto;
+  }
+
+  @media screen and (max-width: 660px){
+    width: 100%;
+  }
+}
