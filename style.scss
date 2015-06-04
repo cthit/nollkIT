@@ -34,439 +34,440 @@ $border-radius:0.15em;
 
 
 body {
-	font-family: $standard-font;
-	color: $text-color;
-	background-color: $background-color;
-	margin:0;
-	padding:0;
+  font-family: $standard-font;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
 
-	//Most ul:s uses this class to bring the basic style of ul:s.
-	.list{
-		list-style-type: none;
-		margin:0;
-		padding:0;
-		a{
-			text-decoration: none;
-			color: inherit;
-			&:hover{
-				color:white;
-			}
-		}
-	}
-	//End List
+  //Most ul:s uses this class to bring the basic style of ul:s.
+  .list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+      color: inherit;
 
-	//HEADER START
-	header {
-            height: 28em;
-            position: relative;
-            background: no-repeat center center;
-            background-size: cover;
-            padding-top: 1rem;
-            .top-bar{
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  //End List
 
-              background-color: $header-background-color;
-              width:100%;
-                #mobile-menu-container{
-                   display:none
-                 }
-                #logo-and-mobile-wrapper{
-                  margin-left:2%;
-                  width: 18%;
-                  display: inline-block;
-                    #logo-container{
-                      a{
-                        text-decoration: none;
-                        img {
-                          height: 5rem;
-                        }
-                      }
-                    }
-                  #mobile-hamburger-container{
-                     display:none;
-                  }
+  //HEADER START
+  header {
+    height: 28em;
+    position: relative;
+    background: no-repeat center center;
+    background-size: cover;
+    padding-top: 1rem;
+  }
 
-              }
-              #desktop-menu-container{
-                vertical-align: top;
-                margin-right:2%;
-                width: 77%;
-                display: inline-block;
-                ul{
+  .top-bar {
+    background-color: $header-background-color;
+    width: 100%;
+  }
 
-                  text-align: right;
+  #mobile-menu-container {
+    display: none
+  }
 
-                  li{
-                    margin:0 .3125rem 0 .3125rem;
-                    padding:2.0625rem 0 2.0625rem 0;
-                    display: inline-block;
-                    &.current_page_item{
-                      color:white;
-                    }
+  #logo-and-mobile-wrapper {
+    margin-left: 2%;
+    width: 18%;
+    display: inline-block;
 
-                  }
+    a {
+      text-decoration: none;
+    }
 
-                }
-              }
+    img {
+      height: 5rem;
+    }
 
-            }
+    #mobile-hamburger-container {
+      display: none;
+    }
+  }
 
-		//CONTACT-CONTAINER START	
-		#contact-container{
-			background-color: rgba(0,0,0,.4);
-			text-align: right;
-			display: block;
-			width: 100%;
-			height: 1.5em;
-			#number-container {
-				width: 60%;
-              margin-left: 2%;
-				display: inline-block;
-				float: left;
-				height: inherit;
-				ul{
-					text-align: left;
-					height: inherit;
-					li{
+  #desktop-menu-container {
+    vertical-align: top;
+    margin-right: 2%;
+    width: 77%;
+    display: inline-block;
 
-						height: inherit;
-						display: inline-block;
-						a{
-							color: white;
-                            i{
-                               display: none;
-                             }
-                            span{
-                                display: inline-block;
-                            }
-						}
-					
-					}
-				}
-			}	
-			.fb-like{
-				margin-top: 1.0075px;
-				position: relative;
-				vertical-align: middle;
-			}
-			iframe{
-				position: relative;
-				vertical-align: middle;
-				margin-right: 3%;
-			}
-		}
-		//CONTACT-CONTAINER ENDS
-	}
-	//HEADER END
+    ul {
+      text-align: right;
+    }
 
-	//START CONTENT
-	.content-container{
-		margin:1% 1% 0 1%;
-		&.declaration{
-			margin: 2% 25%;
-			iframe{
-				width: 100%;
-			}
-		}
-		#scheme-page-container{
-            float:none;
-            display: block;
-			width: 60%;
-			margin:1% auto;
-			iframe{
-				width: 96%;
-				margin:1% 2% 0 2%;
-			}
-		}
-		#group-points{
-			background-color: $post-header-background-color;
-			border-radius: $border-radius;
-			float: left;
-			width: 20%;
-			text-align: center;
-			ul{
-				text-align: left;
-				li{
-					padding: 0.7em 2em;
-				}
-			}
-		}
-		.scheme-daily{
-          display: inline-block;
-          #calendar{
-            background-color: white;
-              .fc-toolbar{
-                .fc-left{
-                  display:block;
-                  width:100%;
-                  text-align: center;
-                  h2{
-                    float:none;
-                  }
-                }
-                .fc-right{
-                  padding:1rem 0 1rem 0;
-                  display: block;
-                  width:100%;
-                  text-align: center;
-                  button{
-                    float:none;
-                  }
-                  .fc-button-group{
-                    float:none;
-                  }
-                }
-              }
-              #arrow-container{
-                display:none;
-              }
-          }
-			text-align: center;
-			float: right;
-			width: 20%;
+    li {
+      margin: 0 .3125rem 0 .3125rem;
+      padding: 2.0625rem 0 2.0625rem 0;
+      display: inline-block;
 
-		}
-		//ALL POSTS USE THIS CONTAINER
-		.posts-container{
-			margin:0 auto;
-			width: 60%;
-            &.first-page{
-              width:58%;
-            }
-			//Every Post uses this container
-			.post{
-				color: $post-text-color;
-				//Article for every post
-				article{
-					border-radius: $border-radius;
-					background-color: $post-background-color;
-					width: 100%;
-					margin: 1% 0 0 0;
-					//Header of every post.
-					.post-header-container{
-						background-color: $post-header-background-color;
-						border-top-left-radius: $border-radius;
-						border-top-right-radius: $border-radius;
-						text-align:center;
-						color:$post-header-text-color;
-						height: 2.5em;
-						background-image: none;
-                        &.faq-header{
-                          cursor:pointer;
-                        }
-					}
+      &.current_page_item {
+        color: white;
+      }
+    }
+  }
 
-                    .image-container{
-                      width: 100%;
-                      text-align: center;
-                      img{
-                        width:100%;
-                      }
-                    }
+  //CONTACT-CONTAINER START
+  #contact-container {
+    background-color: rgba(0, 0, 0, .4);
+    text-align: right;
+    display: block;
+    width: 100%;
+    height: 1.5em;
+  }
 
-					//Content container for every pot
-					.post-content-container{
-                        width:100%;
-                        box-sizing: border-box;
-						padding:0 3% 2% 3%;
-						margin:0;
-                            p{
-                              margin:0;
-                              -webkit-margin-before: 0;
-                              -webkit-margin-after: 0;
-                              width:100%;
-                              a{
-                                img{
-                                  max-width:100%;
-                                }
-                              }
-                            }
-							iframe{
-								width: 100%;
-							}
-							
-							//Content container for scheme
-							#scheme{
-								width: 100%;
-								text-align: center;
-								tr{
-									text-align: left;
-									&:first-child{
-										td{
-											&:first-child{
-												background-color:$mandatory-table-color;
-												height: 50px;
-												width: 5%;
-											}
-										}
-									}
-									&:nth-child(2){
-										td{
-											&:first-child{
-												background-color:$lecture-table-color;
-												height: 50px;
-												width: 5%;
-											}
-										}
-									}
-									&:nth-child(3){
-										td{
-											&:first-child{
-												background-color:$reception-table-color;
-												height: 50px;
-												width: 5%;
-											}
-										}
-									}
-									&:nth-child(4){
-										td{
-											&:first-child{
-												background-color:$reception-table-color;
-												height: 50px;
-												width: 5%;
-											}
-										}
-									}
-								}	
-							}
-							//End content container for scheme
+  #number-container {
+    width: 60%;
+    margin-left: 2%;
+    display: inline-block;
+    float: left;
+    height: inherit;
 
-							//Content for FAQ
-							&.faq{
-								display: none;
-								&.show{
-									display:block
-								}
-							}
-							//End content for FAQ
+    ul {
+      text-align: left;
+      height: inherit;
+    }
 
-					}
-					// End Content container for every post.
+    li {
+      height: inherit;
+      display: inline-block;
+    }
 
-					// Post footer container start
-					.post-footer-container{
-						text-align: center;
-						font-size: 0.7em;
-						color: $post-footer-text-color;
-						background-color: $post-footer-background-color;
-						border-bottom-right-radius: $border-radius;
-						border-bottom-left-radius: $border-radius;
-						ul{
-							width: 100%;
-							padding: 0;
-							margin:0;
-							list-style-type: none;
-							li{
-								display: inline-block;
-								width: 31%;
-								&:first-child{
-									text-align: left;
-									padding-left:1%;
-								}
-								&:last-child{
-									text-align: right;
-									padding-right: 1%;
-								}
-							}
-						}
-					}
-					//END POST FOOTER
-				}
-				//End Article
-			}
-			//END POST
-		}
-		//All posts container
-	}
-	//End main content
+    a {
+      color: white;
+    }
 
-	//Site footer start
-	.site-footer{
-		clear: both;
-		margin-top: 1em;
-		font-size: 0.7em;
-		width: 100%;
-		padding: 1em 0;
-		background-color:$footer-background-color;
+    i {
+      display: none;
+    }
 
-		//Wrapper start
-		#wrapper{
-			font-size: 0;
-			width: 100%;
+    span {
+      display: inline-block;
+    }
+  }
 
-			//common class for the 3x section elements in the footer.
-			.lots-of-links{
-				display: inline-block;
-				width: 33.333333%;
-				font-size: 12px;
-				h3{
-					font-size: 18.7px;
-					text-align: center;
-				}
+  .fb-like {
+    margin-top: 1.0075px;
+    position: relative;
+    vertical-align: middle;
+  }
 
-				//Target specially the container for the sektionen related information.
-				&#sektionen{
-						font-size: 0;
-						ul{
-							font-size: 12px;
-							display: inline-block;
-							width: 47.5%;
-							padding-left: 2.5%;
-							&#name-of-compounds{
-								width: 47.5%;
-								text-align: right;
-								padding-right: 2.5%;
-								padding-left: 0;
-							}
-						}
-					}
-				}
-				//end sektionen.
+  iframe {
+    position: relative;
+    vertical-align: middle;
+    margin-right: 3%;
+  }
 
-				//Common class for the 2x "good links" slits.
-				.good-links{
-					ul{
-						font-size: 12px;
-						li{
-							text-align: center;
-						}
-					}
-				}
-				//End good links
-		}
-		//End lots-of-links
+  //START CONTENT
+  .content-container {
+    margin: 1% 1% 0 1%;
 
-		//NAV START
-		.site-nav{
-			.menu-footer-container{
-				text-align: center;
-				ul{
-					padding:0;
-					list-style-type: none;
-					li{
-						margin-top: 1em;
-						margin-left: 1%;
-						display: inline-block;
-						padding: 3px 10px;
-						&:hover{
-							a{
-								color:$text-hover-color;
-							}
-						}
-						a{
-							width: inherit;
-							height: inherit;
-							text-decoration: none;
-							color:$text-color;
-							font-size: 0.8em;
-						}
-					}
-				}
-			}
-		}
-		//NAV END	
-	}
-	//End site-footer
+    &.declaration {
+      margin: 2% 25%;
+
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+
+  #scheme-page-container {
+    float: none;
+    display: block;
+    width: 60%;
+    margin: 1% auto;
+
+    iframe {
+      width: 96%;
+      margin: 1% 2% 0 2%;
+    }
+  }
+
+  #group-points {
+    background-color: $post-header-background-color;
+    border-radius: $border-radius;
+    float: left;
+    width: 20%;
+    text-align: center;
+
+    ul {
+      text-align: left;
+    }
+
+    li {
+      padding: 0.7em 2em;
+    }
+  }
+
+
+
+  //The damn calendar.... It's a mess.. I know nothing to do about it...
+  #calendar {
+    background-color: white;
+    text-align: center;
+    float: right;
+    width: 20%;
+
+    .fc-toolbar {
+      .fc-left {
+        display: block;
+        width: 100%;
+        text-align: center;
+        h2 {
+          float: none;
+        }
+      }
+      .fc-right {
+        padding: 1rem 0 1rem 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        button {
+          float: none;
+        }
+        .fc-button-group {
+          float: none;
+        }
+      }
+    }
+  }
+  //end messy calendar...
+
+  #arrow-container {
+    display: none;
+  }
+  //ALL POSTS USE THIS CONTAINER
+  .posts-container {
+    margin: 0 auto;
+    width: 58%;
+  }
+
+  .post-container .first-page {
+    width: 58%;
+  }
+
+  //Every Post uses this container
+  .post {
+    color: $post-text-color;
+
+    //Article for every post
+    article {
+      border-radius: $border-radius;
+      background-color: $post-background-color;
+      width: 100%;
+      margin: 1% 0 0 0;
+    }
+
+    //Header of every post.
+    .post-header-container {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      text-align: center;
+      color: $post-header-text-color;
+      height: 2.5em;
+      background: $post-header-background-color none;
+
+      &.faq-header {
+        cursor: pointer;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  //Content container for every pot
+  .post-content-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 3% 2% 3%;
+    margin: 0;
+
+    p {
+      margin: 0;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+    }
+    //Content for FAQ
+    &.faq {
+      display: none;
+      &.show {
+        display: block
+      }
+    }
+    //End content for FAQ
+  }
+
+  //Content container for scheme
+  #scheme {
+    width: 100%;
+    text-align: center;
+    tr {
+      text-align: left;
+    }
+    tr:first-child td:first-child {
+      background-color: $mandatory-table-color;
+      height: 50px;
+      width: 5%;
+    }
+
+    tr:nth-child(2) td:first-child {
+      background-color: $lecture-table-color;
+      height: 50px;
+      width: 5%;
+    }
+    tr:nth-child(3) td:first-child {
+      background-color: $reception-table-color;
+      height: 50px;
+      width: 5%;
+    }
+
+    tr:nth-child(4) td:first-child {
+      background-color: $reception-table-color;
+      height: 50px;
+      width: 5%;
+    }
+  }
+  //End content container for scheme
+
+  // Post footer container start
+  .post-footer-container {
+    text-align: center;
+    font-size: 0.7em;
+    color: $post-footer-text-color;
+    background-color: $post-footer-background-color;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none
+    }
+    li {
+      display: inline-block;
+      width: 31%;
+    }
+
+    li:first-child {
+      text-align: left;
+      padding-left: 1%;
+    }
+
+    li:last-child {
+      text-align: right;
+      padding-right: 1%;
+    }
+  }
+  //END POST FOOTER
+
+  //Site footer start
+  .site-footer {
+    clear: both;
+    margin-top: 1em;
+    font-size: 0.7em;
+    width: 100%;
+    padding: 1em 0;
+    background-color: $footer-background-color;
+
+    //Wrapper start
+    #wrapper {
+      font-size: 0;
+      width: 100%;
+    }
+      //common class for the 3x section elements in the footer.
+  .lots-of-links {
+    display: inline-block;
+    width: 33.333333%;
+    font-size: 12px;
+    h3 {
+      font-size: 18.7px;
+      text-align: center;
+    }
+  }
+
+  //Target specially the container for the sektionen related information.
+  #sektionen {
+    font-size: 0;
+    ul {
+    font-size: 12px;
+    display: inline-block;
+    width: 47.5%;
+    padding-left: 2.5%;
+
+      &#name-of-compounds {
+        width: 47.5%;
+        text-align: right;
+        padding-right: 2.5%;
+        padding-left: 0;
+      }
+    }
+  }
+
+
+      //end sektionen.
+
+      //Common class for the 2x "good links" slits.
+  .good-links {
+    ul {
+      font-size: 12px;
+      li {
+        text-align: center;
+      }
+    }
+  }
+    //End lots-of-links
+
+  .menu-footer-container {
+    text-align: center;
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      margin-top: 1em;
+      margin-left: 1%;
+      display: inline-block;
+      padding: 3px 10px;
+    }
+
+    li:hover a{
+      color: $text-hover-color;
+    }
+
+    a {
+      width: inherit;
+      height: inherit;
+      text-decoration: none;
+      color: $text-color;
+      font-size: 0.8em;
+    }
+  }
+    //NAV END
+  }
 }
+  //End site-footer
 
 
 
@@ -501,150 +502,134 @@ body {
 
 
 //--------------------------------SCREENS WITH MAX WIDTH OF 960PX BELOW------------------------------
-@media screen and (max-width: 960px){
-	body{
-		//HEADER START
-		header {
-            height: 21em;
-			padding-top: 0;
-            .top-bar{
-                background-color: $header-background-color;
-                #mobile-menu-container{
-                  display: none;
-                }
-                #logo-and-mobile-wrapper{
-                  width:100%;
-                  #logo-container{
-                    width: 100%;
-                    text-align: center;
-                    a{
-                      img{
-                        height:5rem;
-                      }
-                    }
-                  }
-                  #mobile-hamburger-container{
-                    display:none;
-                  }
-                }
-                #desktop-menu-container{
-                  width:100%;
-                  display:block;
-                  ul{
-                    text-align: center;
-                    li{
-                      display:inline-block;
-                      padding:1rem .3rem;
-                      a{
+@media screen and (max-width: 960px) {
+  header {
+    height: 21em;
+    padding-top: 0;
+  }
+  .top-bar {
+    background-color: $header-background-color;
+  }
 
-                      }
-                    }
-                  }
-                }
-            }
+  #mobile-menu-container {
+    display: none;
+  }
 
-				
-			//Contact container starts		
-			#contact-container{
-				display:inline-block;
-				text-align: center;
+  #logo-and-mobile-wrapper {
+    width: 100%;
+  }
 
-				//Journummer and MK number container
-				#number-container{
-                    margin-left:0;
-					width: 100%;
-					ul{
-						text-align: center;
-						li{
-							width: 40%;
-							margin:0;
-						}
-					}
-				}
-				//End number container
+  #logo-container {
+    width: 100%;
+    text-align: center;
+    a {
+      img {
+        height: 5rem;
+      }
+    }
+  }
 
-                //Twitter and FB
-                #social-media-container{
-                  display:none;
-                }
-			}
-			//Contact container ends	
-		}
-		//HEADER END
+  #mobile-hamburger-container {
+    display: none;
+  }
 
-		//START CONTENT
-		.content-container{
+  #desktop-menu-container {
+    width: 100%;
+    display: block;
+    ul {
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      padding: 1rem .3rem;
+    }
+  }
 
-			//Content container for scheme page
-			#scheme-page-container{
-				width: 90%;
-			}
-			//end scheme page container
+  //Contact container starts
+  #contact-container {
+    display: inline-block;
+    text-align: center;
+  }
 
-			//Content container for declaration
-			&.declaration{
-				margin: 2% 12%;
-			}
-			//declaration container end.
+  //Journummer and MK number container
+  #number-container {
+    margin-left: 0;
+    width: 100%;
 
-            #group-points{
-              display: none;
-            }
+    ul {
+      text-align: center;
+    }
 
-			//daily scheme on index.php container
-			.scheme-daily {
-                display: block;
-				float: none;
-				width: 90%;
-				margin:0 auto;
-                #calendar{
-                  #arrow-container{
-                    display:block;
-                    text-align:center;
-                    padding-bottom: 1rem;
-                    .arrow{
-                      font-size: 2rem;
-                      color:#000000;
-                    }
-                    #arrow-up{
-                      display:none;
-                    }
-                  }
-                }
-			}
-			//end scheme daily
+    li {
+      width: 40%;
+      margin: 0;
+    }
+  }
 
-			//All normal posts container.
-			.posts-container{
-				display: block;
-				width: 90%;
-                &.first-page{
-                  width:90%;
-                }
-			}
-			//end normal posts container
-		}
+  #social-media-container {
+    display: none;
+  }
 
-		//END CONTENT
+  //Content container for scheme page
+  #scheme-page-container {
+    width: 90%;
+  }
+  //end scheme page container
 
-		//Start site-footer
-		.site-footer{
-			#wrapper{
-				#sektionen{
-					width: 100%;
-				}
-				#good-links1{
-					display:none;
-				}
-				#good-links2{
-					display:none;
-				}
-			}
-		}
-		//end site-footer
+  //Content container for declaration
+  .content-container .declaration {
+    margin: 2% 12%;
+  }
+  //declaration container end.
 
-	}	
-	//BODY END
+  #group-points {
+    display: none;
+  }
+
+  //daily scheme on index.php container
+  .scheme-daily {
+    display: block;
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #arrow-container {
+    display: block;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    .arrow {
+      font-size: 2rem;
+      color: #000000;
+    }
+
+    #arrow-up {
+      display: none;
+    }
+  }
+
+  //All normal posts container.
+  .posts-container {
+    display: block;
+    width: 90%;
+  }
+
+  .posts-container .first-page {
+    width: 90%;
+  }
+
+  #sektionen{
+      width: 100%;
+  }
+
+  #good-links1{
+      display:none;
+  }
+
+  #good-links2{
+      display:none;
+  }
 }
 //-------------------------------------END MAX-WIDTH 960PX-------------------------------
 
@@ -682,195 +667,188 @@ body {
 
 //-------------------------------------START MAX-WIDTH 660px-----------------------------
 @media screen and (max-width: 660px){
-	body{
-
 		//HEADER START
-		header {
-            background-position: center center;
-            background-size: cover;
-            height: 12em;
-			background-repeat: no-repeat;
-            .top-bar{
-                width: 100%;
-                background-color: $header-background-color;
-                position: absolute;
-                z-index: 100;
-                .menu-header-container{
-                    background-color: $header-background-color;
-                    display: none;
-                    ul{
-                      margin:0;
-                      padding:0;
-                      list-style-type: none;
-                        li{
-                            text-align:center;
-                            &.current_page_item{
-                              a{
-                                color:white;
-                              }
-                            }
-                            a{
-                                padding:.5rem 0 .5rem 0;
-                                display: block;
-                                width: 100%;
-                                text-decoration: none;
-                                color:gray;
-                                &:hover{
-                                  color:white;
-                                }
-                            }
-                        }
-                    }
-                }
+  header {
+    background-size: cover;
+    height: 12em;
+    background: no-repeat center center;
+  }
+  .top-bar {
+    width: 100%;
+    background-color: $header-background-color;
+    position: absolute;
+    z-index: 100;
+  }
+  .menu-header-container{
+    background-color: $header-background-color;
+    display: none;
 
-                #logo-and-mobile-wrapper{
-                    width: 96%;
-                    height: 3rem;
-                    margin: 0 2% 0 2%;
-                    #logo-container{
-                        width: 160px;
-                        float:left;
-                        height: inherit;
-                        a{
-                          img{
-                              height: 3rem;
-                          }
-                        }
-                    }
-                    #mobile-hamburger-container{
-                      display:block;
-                      height: 3rem;
-                      float:right;
-                        button{
-                            height: inherit;
-                            background-color: transparent;
-                            border: none;
-                            color: gray;
-                            i{
-                              font-size: 2rem;
-                            }
-                            &:hover{
-                              color: white;
-                            }
-                            &#cross{
-                              display: none;
-                            }
-                        }
-                    }
-                }
-                #desktop-menu-container{
-                  display: none;
-                }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
 
-            }
+    li {
+      text-align: center;
+    }
+
+    li .current_page_item a{
+      color:white;
+    }
+
+    a {
+      padding: .5rem 0 .5rem 0;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: gray;
+    }
+
+    a:hover{
+      color:white;
+    }
+  }
+
+  #logo-and-mobile-wrapper {
+    width: 96%;
+    height: 3rem;
+    margin: 0 2% 0 2%;
+  }
+
+  #logo-container{
+    width: 160px;
+    float:left;
+    height: inherit;
+
+    img{
+        height: 3rem;
+    }
+  }
+  #mobile-hamburger-container{
+    display:block;
+    height: 3rem;
+    float:right;
+    button {
+      height: inherit;
+      background-color: transparent;
+      border: none;
+      color: gray;
+    }
+    button:hover{
+      color: white;
+    }
+    #cross{
+      display: none;
+    }
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  #desktop-menu-container{
+    display: none;
+  }
+
+  //Contact container starts
+  #contact-container {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  //Journummer and MK number container
+  #number-container{
+    width: 100%;
+
+    ul {
+      width: 100%;
+      text-align: center;
+    }
+
+    li {
+      vertical-align: middle;
+      float: left;
+      width: 50%;
+    }
+
+    li:last-child{
+      float:right;
+    }
+
+    a {
+      font-size: 0.9rem;
+      white-space: normal;
+    }
+
+    i{
+      display:inline-block;
+    }
+
+    span{
+        display: none;
+    }
+  }
+  //End number container
+
+  //Twitter and FB
+  #social-media-container{
+    display:none;
+  }
 
 
+  .content-container {
+    margin: 1% 1% 0 1%;
+  }
 
+  //Content container for scheme page
+  #scheme-page-container{
+    width: 100%;
 
-			//Contact container starts
-			#contact-container{
-				position: absolute;bottom:0;
-				text-align: center;
-				background-color: transparent;
+    iframe{
+        margin:0;
+        width: 100%;
+    }
+  }
+  //end scheme page container
 
-				//Journummer and MK number container
-				#number-container{
-					width: 100%;
-					ul{
-                        width: 100%;
-						text-align: center;
+  //Content container for declaration
+  .content-container .declaration{
+      margin: 3% 0;
 
-						li{
-                            vertical-align: middle;
-                            float:left;
-							width: 50%;
-                            &:last-child{
-                              float:right;
-                            }
-							a{
-								font-size: 0.9rem;
-                                white-space: normal;
-                                i{
+      iframe{
+          width: 100%;
+      }
+  }
+  //Declaration container end
 
-                                    display:inline-block;
-                                }
-                                span{
-                                    display: none;
-                                }
-							}
-						}
-					}
-				}
-				//End number container
+  //daily scheme on index.php container
+  .scheme-daily {
+      width: 100%;
+  }
+  //end scheme daily
 
-                //Twitter and FB
-                #social-media-container{
-                  display:none;
-                }
-			}
-			//Contact container ends
-		}
-		//HEADER END
+  //All normal posts container.
+  .posts-container{
+      width: 100%;
+      &.first-page{
+        width:100%;
+      }
+  }
+  //end normal posts container
 
-
-		.content-container{
-			margin:1% 1% 0 1%;
-
-			//Content container for scheme page
-			#scheme-page-container{
-				width: 100%;
-				iframe{
-					margin:0;
-					width: 100%;
-				}
-			}
-			//end scheme page container
-
-			//Content container for declaration
-			&.declaration{
-				margin: 3% 0;
-				iframe{
-					width: 100%;
-				}
-			}
-			//Declaration container end
-
-			//daily scheme on index.php container
-			.scheme-daily {
-				width: 100%;
-			}
-			//end scheme daily
-
-			//All normal posts container.
-			.posts-container{
-				width: 100%;
-                &.first-page{
-                  width:100%;
-                }
-			}
-			//end normal posts container
-		}
-		//End normal posts container
-
-		//Start site-footer
-		.site-footer{
-			#wrapper{
-				.lots-of-links{
-					&#sektionen{
-					width: 100%;
-						h3{
-							font-size: 15px;
-						}
-						ul{
-							font-size: 10px;
-						}
-					}
-				}	
-			}
-		}
-		//end site-footer
-	}	
-	//BODY END
+  #sektionen{
+    width: 100%;
+    h3{
+      font-size: 15px;
+    }
+    ul{
+      font-size: 10px;
+    }
+  }
+   //end site-footer
 }
 //-------------------------------------END MAX-WIDTH 660PX-------------------------------
 
