@@ -44,7 +44,7 @@ get_header();
                 <section class="post">
                     <article>
                         <header class="post-header-container">
-                            <p><?php the_title(); ?></p>
+                            <h2><?php the_title(); ?></2>
                         </header>
                         <div class="post-content-container">
                             <?php the_content(); ?>

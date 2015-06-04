@@ -201,12 +201,14 @@
   position: relative;
   vertical-align: middle; }
 
-@media screen and (max-width: 960px) {
-  #social-media-container {
-    display: none; } }
-@media screen and (max-width: 660px) {
-  #social-media-container {
-    display: none; } }
+#social-media-container {
+  line-height: normal; }
+  @media screen and (max-width: 960px) {
+    #social-media-container {
+      display: none; } }
+  @media screen and (max-width: 660px) {
+    #social-media-container {
+      display: none; } }
 
 iframe {
   position: relative;

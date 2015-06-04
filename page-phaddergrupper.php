@@ -11,10 +11,10 @@
                     <section class="post ">
                         <article>
                             <header class="post-header-container">
-                                <?php the_field('phaddergruppstitel_' . $i); ?>
+                                <h2><?php the_field('phaddergruppstitel_' . $i); ?></h2>
                             </header>
                             <div class="post-content-container">
-                                <?php the_field('phaddergruppsmedlemmar_' . $i); ?>
+                                <p><?php the_field('phaddergruppsmedlemmar_' . $i); ?></p>
                             </div>
                         </article>
                     </section>
