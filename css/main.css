@@ -418,7 +418,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   /*dim the background*/ }
 
-.calendar-popup {
+.calendar-modal-panel {
   display: none;
   position: fixed;
   background-color: white;
@@ -426,27 +426,28 @@ body {
   text-align: center;
   z-index: 11;
   /* 1px higher than the overlay layer */ }
-  .calendar-popup h3 {
+  .calendar-modal-panel h3 {
     line-height: 0; }
-  .calendar-popup ul {
+  .calendar-modal-panel ul {
     padding: 5%;
     text-align: left; }
-  .calendar-popup li {
+  .calendar-modal-panel li {
     font-size: 1rem; }
-  .calendar-popup a:hover {
+  .calendar-modal-panel a:hover {
     color: black; }
 
-#close-modal-panel {
+#calendar-close-modal-panel {
   position: absolute;
   border: none;
   top: 0;
   right: 0;
   background-color: transparent; }
-  #close-modal-panel .fa-times {
-    font-size: 2rem;
-    color: gray; }
 
-#close-modal-panel:hover .fa-times {
+.fa-times {
+  color: gray;
+  font-size: 2rem; }
+
+.close-modal-panel:hover .fa-times {
   color: black; }
 
 .content-container {
@@ -582,14 +583,27 @@ body {
     .post .image-container img {
       width: 100%; }
 
+.modal-panel {
+  display: none;
+  position: absolute;
+  z-index: 11;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center; }
+
+.clickable {
+  cursor: pointer; }
+
+.clickable:hover {
+  color: teal; }
+
 .post-content-container {
   width: 100%;
   box-sizing: border-box;
   padding: 2% 3% 2% 3%;
   margin: 0; }
   .post-content-container p {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
+    overflow: auto;
     width: 100%; }
   .post-content-container img {
     max-width: 100%; }

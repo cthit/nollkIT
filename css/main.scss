@@ -80,7 +80,7 @@ body{
     background-color: rgba(0,0,0,0.8); /*dim the background*/
   }
 
-  .calendar-popup{
+  .calendar-modal-panel {
     display:none;
     position: fixed;
     background-color: white;
@@ -102,22 +102,22 @@ body{
     }
   }
 
-  #close-modal-panel{
+  #calendar-close-modal-panel {
     position: absolute;
     border:none;
     top:0;
     right:0;
     background-color: transparent;
-
-    .fa-times{
-      font-size:2rem;
-      color:gray;
-    }
   }
 
-  #close-modal-panel:hover .fa-times{
+  .fa-times{
+    color:gray;
+    font-size: 2rem;
+  }
+  .close-modal-panel:hover .fa-times{
     color:black;
   }
+
 
   //START CONTENT
   .content-container {
@@ -304,6 +304,9 @@ body{
       }
     }
 
+
+
+
     .image-container {
       width: 100%;
       text-align: center;
@@ -313,6 +316,21 @@ body{
     }
   }
 
+  .modal-panel{
+    display: none;
+    position: absolute;
+    z-index: 11;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .clickable{
+    cursor:pointer;
+  }
+
+  .clickable:hover{
+    color:teal;
+  }
   //Content container for every pot
   .post-content-container {
     width: 100%;
@@ -321,8 +339,7 @@ body{
     margin: 0;
 
     p {
-      -webkit-margin-before: 0;
-      -webkit-margin-after: 0;
+      overflow:auto;
       width: 100%;
     }
 
