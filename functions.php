@@ -2,8 +2,12 @@
 
 
 function addResources() {
-	
+    wp_enqueue_style('font-awesome',get_template_directory_uri() . '/font-awesome/css/font-awesome.css');
 	wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
+
+
+    wp_enqueue_script('calendar-modal-panel.js',get_template_directory_uri() . '/js/calendar-modal-panel.js');
+    wp_enqueue_script('phaddergroups-js',get_template_directory_uri() . '/js/phaddergroups-modal-panel.js');
 }
 
 add_action('wp_enqueue_scripts', 'addResources');
