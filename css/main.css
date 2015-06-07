@@ -585,7 +585,7 @@ body {
 
 .modal-panel {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 11;
   background-color: white;
   border-radius: 5px;
