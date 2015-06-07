@@ -42,7 +42,7 @@ $(document).ready(function(){
         },
 
         eventClick: function(calEvent, jsEvent, view) {
-            showModalPanel(calEvent);
+            showCalendarModalPanel(calEvent);
             changeModalPanelAccordingToSize();
         }
     });
@@ -73,11 +73,11 @@ $(document).ready(function(){
 
     var changeModalPanelAccordingToSize = function(){
         if (screenWidth <= 660) {
-            setModalPanelSize(95,70);
+            setCalendarModalPanelSize(95,70);
         } else if (screenWidth <= 960) {
-            setModalPanelSize(60,40);
+            setCalendarModalPanelSize(60,40);
         } else {
-            setModalPanelSize(40,60);
+            setCalendarModalPanelSize(40,60);
         }
     }
 
