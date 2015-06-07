@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
         <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.css' />
         <link media="print" rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.print.css' />
-        <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/lib/jquery.min.js'></script>
         <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/lib/moment.min.js'></script>
         <script src='<?php echo get_template_directory_uri(); ?>/fullcalendar/fullcalendar.js'></script>
         <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/fullcalendar/gcal.js'></script>
@@ -15,8 +15,6 @@
 		<!--Här under läggs den heliga nollbrickan till bara så du vet -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/nollbricka.png" />
 
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 	</head>
@@ -24,10 +22,10 @@
     <body class="body">
 
     <div id="cover-screen-container"></div>
-    <div class="calendar-popup">
-        <button id="close-modal-panel"><i class="fa fa-times"></i></button>
-        <h3 id="modal-panel-title">Title</h3>
-        <div id="modal-panel-content-container">
+    <div class="calendar-modal-panel modal-panel">
+        <button id="calendar-close-modal-panel" class="close-modal-panel"><i class="fa fa-times"></i></button>
+        <h3 id="calendar-modal-panel-title">Title</h3>
+        <div id="calendar-modal-panel-content-container">
             <ul class="list" id="where-when-how-list">
                 <li id="where">Var? Hubben 2.1</li>
                 <li id="when">När? xxx</li>
@@ -35,7 +33,6 @@
                 <li ><a id="event-url" target="_blank" >Öppna detta event i google calendar <i class="fa fa-calendar"></i></a></li>
             </ul>
         </div>
-
     </div>
 
         <script>(function(d, s, id) {
