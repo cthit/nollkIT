@@ -6,7 +6,6 @@
     get_header();
     the_post();
 ?>
-<script src="<?php echo get_template_directory_uri() ?>/js/phaddergroups.js"></script>
 <div class="content-container">
     <div class="posts-container">
         <?php
@@ -27,7 +26,7 @@
                                     <?php the_sub_field('members'); ?>
                                 </div>
                                 <div id="modal-panel-id-<?php echo $i ?>" class="modal-panel">
-                                    <
+                                    <button class="close-modal-panel"><i class="fa fa-times"></i></button>
                                     <?php the_sub_field('modal_panel_popup'); ?>
                                 </div>
                             </article>
