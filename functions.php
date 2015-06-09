@@ -13,8 +13,6 @@ function addResources() {
         wp_enqueue_script('phaddergroups-js',get_template_directory_uri() . '/js/phaddergroups-modal-panel.js');
     }
 
-    wp_enqueue_script('Google-map',get_template_directory_uri() . '/js/google-map.js');
-
 
 }
 
