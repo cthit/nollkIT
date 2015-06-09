@@ -32,14 +32,18 @@ get_header();
     <div id="group-points">
         <h3>Nuvarande ställning</h3>
         <ul class="list">
-            <li><?php the_field('grupp_1') ?></li>
-            <li><?php the_field('grupp_2') ?></li>
-            <li><?php the_field('grupp_3') ?></li>
-            <li><?php the_field('grupp_4') ?></li>
-            <li><?php the_field('grupp_5') ?></li>
-            <li><?php the_field('grupp_6') ?></li>
-            <li><?php the_field('grupp_7') ?></li>
-            <li><?php the_field('grupp_8') ?></li>
+            <?php
+                // check if the repeater field has rows of data
+                if( have_rows('repeater') ) {
+                    // loop through the rows of data
+                    while (have_rows('repeater')) {
+                        the_row();
+            ?>
+                        <li><?php echo get_sub_field('group'); ?></li>
+            <?php
+                    }
+                }
+            ?>
         </ul>
     </div>
 
