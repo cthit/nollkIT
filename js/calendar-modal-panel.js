@@ -1,4 +1,4 @@
-/**
+    /**
  * Created by OscarEvertsson on 01/06/15.
  */
 $(document).ready(function(){
@@ -37,10 +37,12 @@ $(document).ready(function(){
 
         //Sets the url
         $('#where-when-how-list').find('#event-url').attr('href',calendarEvent.url);
+        changeModalPanelAccordingToSize();
     };
 
+
     //If for instance you want to change the model panel size to 40% width and 60% height call setCalendarModalPanelSize(40,60)
-    window.setCalendarModalPanelSize = function(width,height){
+    setCalendarModalPanelSize = function(width,height){
         var windowWidth = $(window).width();
         var windowHeight = $(window).height();
         //Changes the width and the height of the modal panel to the given percent.
@@ -67,5 +69,21 @@ $(document).ready(function(){
         closeModalPanel();
     });
 
+    var changeModalPanelAccordingToSize = function(){
+        if ($(window).width() <= 660) {
+            setCalendarModalPanelSize(95,70);
+        } else if ($(window).width() <= 960) {
+            setCalendarModalPanelSize(60,40);
+        } else {
+            setCalendarModalPanelSize(40,60);
+        }
+    }
+
+    $(window).resize(function(){
+        changeModalPanelAccordingToSize();
+    });
+
+    //On startup
+    changeModalPanelAccordingToSize();
 
 });
