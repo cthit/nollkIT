@@ -11,7 +11,7 @@
 						<section class="post">
 							<article>
 								<header class="post-header-container faq-header">
-									<p><?php the_title(); ?></p>
+									<h2><?php the_title(); ?></h2>
 								</header>
 								<div class="post-content-container faq">
 									<?php the_content(); ?>

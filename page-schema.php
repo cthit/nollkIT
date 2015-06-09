@@ -6,7 +6,7 @@
                 <section class="post">
                     <article>
                         <header class="post-header-container">
-                            <p><?php the_field('titel_info_text_schema'); ?></p>
+                            <h2><?php the_field('titel_info_text_schema'); ?></h2>
                         </header>
                         <div class="post-content-container">
                             <table id="scheme">

@@ -299,7 +299,7 @@ $post-header-text-color:white;
 }
 
 #social-media-container {
-
+  line-height: normal;
   @media screen and (max-width: 960px) {
     display: none;
   }

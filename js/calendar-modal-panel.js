@@ -1,4 +1,4 @@
-/**
+    /**
  * Created by OscarEvertsson on 01/06/15.
  */
 $(document).ready(function(){
@@ -12,10 +12,10 @@ $(document).ready(function(){
     });
 
     //Update
-    window.showModalPanel = function(calendarEvent){
+    window.showCalendarModalPanel = function(calendarEvent){
         $('#cover-screen-container').fadeIn(); //Fades in the background cover
-        $('.calendar-popup').fadeIn(); //Fades in the window
-        $('#modal-panel-title').text(calendarEvent.title); //Sets the title of the event
+        $('.calendar-modal-panel').fadeIn(); //Fades in the window
+        $('#calendar-modal-panel-title').text(calendarEvent.title); //Sets the title of the event
 
         //Sets the location if there is one.
         if (typeof calendarEvent.location === "undefined") {
@@ -37,10 +37,12 @@ $(document).ready(function(){
 
         //Sets the url
         $('#where-when-how-list').find('#event-url').attr('href',calendarEvent.url);
+        changeModalPanelAccordingToSize();
     };
 
-    //If for instance you want to change the model panel size to 40% width and 60% height call setModalPanelSize(40,60)
-    window.setModalPanelSize = function(width,height){
+
+    //If for instance you want to change the model panel size to 40% width and 60% height call setCalendarModalPanelSize(40,60)
+    setCalendarModalPanelSize = function(width,height){
         var windowWidth = $(window).width();
         var windowHeight = $(window).height();
         //Changes the width and the height of the modal panel to the given percent.
@@ -52,20 +54,36 @@ $(document).ready(function(){
         var howMuchFromTop = (100 - heightInPercent)/2;
 
         //Sets the calculated values and ads the % to it
-        $('.calendar-popup').css({'width':widthInPercent + '%','height':heightInPercent + '%',
+        $('.calendar-modal-panel').css({'width':widthInPercent + '%','height':heightInPercent + '%',
         'top':howMuchFromTop + '%','left':howMuchFromLeft + '%'});
     }
 
     //Closes the modal panel and removes the background dimmer.
     var closeModalPanel = function(){
         $('#cover-screen-container').fadeOut();
-        $('.calendar-popup').fadeOut();
+        $('.calendar-modal-panel').fadeOut();
     }
 
     //Close modal panel
-    $('#close-modal-panel').on("click",function(){
+    $('#calendar-close-modal-panel').on("click",function(){
         closeModalPanel();
     });
 
+    var changeModalPanelAccordingToSize = function(){
+        if ($(window).width() <= 660) {
+            setCalendarModalPanelSize(95,70);
+        } else if ($(window).width() <= 960) {
+            setCalendarModalPanelSize(60,40);
+        } else {
+            setCalendarModalPanelSize(40,60);
+        }
+    }
+
+    $(window).resize(function(){
+        changeModalPanelAccordingToSize();
+    });
+
+    //On startup
+    changeModalPanelAccordingToSize();
 
 });

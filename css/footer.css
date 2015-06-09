@@ -3,7 +3,8 @@
   font-size: 0.7em;
   width: 100%;
   padding: 1em 0;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.8);
+  line-height: normal; }
   .site-footer #wrapper {
     font-size: 0;
     width: 100%; }

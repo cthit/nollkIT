@@ -1,5 +1,7 @@
 
 
+
+@import "wordpress-standard";
 @import "header";
 @import "footer";
 
@@ -36,6 +38,15 @@ body{
   margin: 0;
   padding: 0;
   position: relative;
+  line-height: 25px;
+  h1{
+    margin:0;
+    line-height: 40px;
+  }
+  h2{
+    margin:0;
+    line-height: 40px;
+  }
 }
 
   //Most ul:s uses this class to bring the basic style of ul:s.
@@ -69,7 +80,7 @@ body{
     background-color: rgba(0,0,0,0.8); /*dim the background*/
   }
 
-  .calendar-popup{
+  .calendar-modal-panel {
     display:none;
     position: fixed;
     background-color: white;
@@ -91,22 +102,22 @@ body{
     }
   }
 
-  #close-modal-panel{
+  .close-modal-panel{
     position: absolute;
     border:none;
     top:0;
     right:0;
     background-color: transparent;
-
-    .fa-times{
-      font-size:2rem;
-      color:gray;
-    }
   }
 
-  #close-modal-panel:hover .fa-times{
+  .fa-times{
+    color:gray;
+    font-size: 2rem;
+  }
+  .close-modal-panel:hover .fa-times{
     color:black;
   }
+
 
   //START CONTENT
   .content-container {
@@ -288,13 +299,13 @@ body{
       height: 2.5em;
       background: $post-header-background-color none;
       margin-top: 0;
-      p{
-        margin-top: 0;
-      }
       &.faq-header {
         cursor: pointer;
       }
     }
+
+
+
 
     .image-container {
       width: 100%;
@@ -305,17 +316,35 @@ body{
     }
   }
 
+  .modal-panel{
+    display: none;
+    position: fixed;
+    z-index: 11;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    overflow:auto;
+    img{
+
+      max-width: 100%;
+    }
+  }
+  .clickable{
+    cursor:pointer;
+  }
+
+  .clickable:hover{
+    color:teal;
+  }
   //Content container for every pot
   .post-content-container {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 3% 2% 3%;
+    padding: 2% 3% 2% 3%;
     margin: 0;
 
     p {
-      margin: 0;
-      -webkit-margin-before: 0;
-      -webkit-margin-after: 0;
+      overflow:auto;
       width: 100%;
     }
 
@@ -421,4 +450,13 @@ body{
   @media screen and (max-width: 660px){
     width: 100%;
   }
+}
+
+//Google map
+
+.acf-map{
+  width:100%;
+  height:400px;
+  border: #ccc solid 1px;
+  margin: 20px 0;
 }

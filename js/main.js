@@ -42,8 +42,7 @@ $(document).ready(function(){
         },
 
         eventClick: function(calEvent, jsEvent, view) {
-            showModalPanel(calEvent);
-            changeModalPanelAccordingToSize();
+            showCalendarModalPanel(calEvent);
         }
     });
 
@@ -61,7 +60,6 @@ $(document).ready(function(){
     //Changes the view depending on what breakpoint
     var changeAccordingToSize = function(){
         resetShowHideSchedual();
-        changeModalPanelAccordingToSize();
         if (screenWidth <= 660) {
             $('.fc-view-container').css({"display": "none"});
         } else if (screenWidth <= 960) {
@@ -71,15 +69,6 @@ $(document).ready(function(){
         }
     };
 
-    var changeModalPanelAccordingToSize = function(){
-        if (screenWidth <= 660) {
-            setModalPanelSize(95,70);
-        } else if (screenWidth <= 960) {
-            setModalPanelSize(60,40);
-        } else {
-            setModalPanelSize(40,60);
-        }
-    }
 
     var resetShowHideSchedual = function() {
         $('#arrow-up').css({'display':'none'});
@@ -137,5 +126,4 @@ $(document).ready(function(){
 
     //Run when script launched
     changeAccordingToSize();
-    changeModalPanelAccordingToSize();
 });
