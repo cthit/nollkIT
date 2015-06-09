@@ -74,12 +74,6 @@
 					</ul>
 				</section>
 		</div>
-		<nav class="site-nav">
-			<?php 
-				$args = array('theme_location' => 'footer');
-			?>
-			<?php wp_nav_menu( $args ); ?>
-		</nav>	
 	</footer>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
 

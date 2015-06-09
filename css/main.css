@@ -309,6 +309,7 @@ iframe {
   margin-right: 3%; }
 
 .site-footer {
+  overflow: auto;
   margin-top: 1em;
   font-size: 0.7em;
   width: 100%;
