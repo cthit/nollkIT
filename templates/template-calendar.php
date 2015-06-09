@@ -3,6 +3,7 @@
 * Template Name: Calendar
 */
 get_header();
+the_post();
 ?>
     <div class="calendar-modal-panel modal-panel">
         <button id="calendar-close-modal-panel" class="close-modal-panel"><i class="fa fa-times"></i></button>
@@ -39,7 +40,7 @@ get_header();
                                 <td>Mottagningsverksamhet</td>
                             </tr>
                         </table>
-                        <?php the_field('info_text_schema'); ?>
+                        <?php the_content(); ?>
                     </div>
                 </article>
             </section>
