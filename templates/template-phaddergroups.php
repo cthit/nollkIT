@@ -8,6 +8,17 @@
 ?>
 <div class="content-container">
     <div class="posts-container">
+        <section class="post">
+            <article>
+                <header class="post-header-container">
+                    <h2><?php the_title(); ?></h2>
+                </header>
+                <div class="post-content-container">
+                    <?php the_content(); ?>
+                </div>
+            </article>
+        </section>
+
         <?php
         // check if the repeater field has rows of data
             if( have_rows('repeater') ) {
