@@ -381,8 +381,11 @@ iframe {
 @font-face {
   font-family: "blissful-thinking";
   src: url("../fonts/BlissfulThinking.otf"); }
+@font-face {
+  font-family: "Source-Sans-Pro";
+  src: url("../fonts/SourceSansPro-Semibold.otf"); }
 body {
-  font-family: Arial !important;
+  font-family: Source-Sans-Pro !important;
   color: gray;
   background-color: #00ABE3;
   margin: 0;
@@ -458,18 +461,19 @@ body {
     .content-container {
       margin: 1% 1% 0 1%; } }
 
-.content-container.declaration {
-  margin: 2% 25%; }
-  .content-container.declaration iframe {
+.declaration-container {
+  overflow: auto;
+  margin: 0 auto;
+  width: 58%; }
+  .declaration-container iframe {
+    margin: 0;
     width: 100%; }
   @media screen and (max-width: 960px) {
-    .content-container.declaration {
-      margin: 2% 12%; } }
+    .declaration-container {
+      width: 90%; } }
   @media screen and (max-width: 660px) {
-    .content-container.declaration {
-      margin: 3% 0; }
-      .content-container.declaration iframe {
-        width: 100%; } }
+    .declaration-container {
+      width: 100%; } }
 
 #scheme-page-container {
   float: none;

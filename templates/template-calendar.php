@@ -23,7 +23,7 @@ the_post();
             <section class="post">
                 <article>
                     <header class="post-header-container">
-                        <h2><?php the_field('titel_info_text_schema'); ?></h2>
+                        <h2><?php the_title(); ?></h2>
                     </header>
                     <div class="post-content-container">
                         <table id="scheme">
