@@ -9,10 +9,14 @@
   font-family: "blissful-thinking";
   src: url('../fonts/BlissfulThinking.otf');
 }
+@font-face {
+  font-family:"Source-Sans-Pro";
+  src: url('../fonts/SourceSansPro-Semibold.otf');
+}
 
 
 //Constants
-$standard-font:Arial;
+$standard-font:Source-Sans-Pro;
 $background-color:#00ABE3;
 $footer-background-color:rgba(0,0,0,0.8);
 $header-background-color:rgba(0,0,0,0.6);
@@ -129,24 +133,22 @@ body{
 
   }
 
-  .content-container.declaration {
-    margin: 2% 25%;
+  .declaration-container {
+    overflow:auto;
+    margin:0 auto;
+    width:58%;
 
     iframe {
+      margin:0;
       width: 100%;
     }
-
-    @media screen and (max-width: 960px) {
-      margin: 2% 12%;
+    @media screen and (max-width: 960px){
+      width:90%;
     }
-
     @media screen and (max-width: 660px){
-      margin: 3% 0;
-
-      iframe{
-        width: 100%;
-      }
+      width:100%;
     }
+
   }
 
   #scheme-page-container {
