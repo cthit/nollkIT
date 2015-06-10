@@ -383,7 +383,7 @@ iframe {
   src: url("../fonts/BlissfulThinking.otf"); }
 @font-face {
   font-family: "Source-Sans-Pro";
-  src: url("../fonts/SourceSansPro-Semibold.otf"); }
+  src: url("../fonts/SourceSansPro-Regular.otf"); }
 body {
   font-family: Source-Sans-Pro !important;
   color: gray;
