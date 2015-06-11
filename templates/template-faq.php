@@ -16,10 +16,10 @@
                 ?>
                             <section class="post">
                                 <article>
-                                    <header class="post-header-container">
+                                    <header class="post-header-container faq-header">
                                         <h2><?php echo get_sub_field('title'); ?></h2>
                                     </header>
-                                    <div class="post-content-container">
+                                    <div class="post-content-container faq">
                                         <?php echo get_sub_field('content'); ?>
                                     </div>
                                 </article>
