@@ -12,6 +12,7 @@
 
 <?php
 get_header();
+the_post();
 ?>
 
 <div class="calendar-modal-panel modal-panel">
@@ -55,10 +56,13 @@ get_header();
 
     <div class="posts-container first-page">
         <?php
-        query_posts('category_name=startsida&showposts=5');
-        if (have_posts()) :
-            while (have_posts()) : the_post();
-                ?>
+        $args = array('order' => 'DESC','orderby' => 'date');
+        $the_query = new WP_Query($args);
+        if ($the_query->have_posts()){
+            while($the_query->have_posts()){
+                $the_query->the_post();
+
+            ?>
                 <section class="post">
                     <article>
                         <header class="post-header-container">
@@ -76,11 +80,12 @@ get_header();
                         </footer>
                     </article>
                 </section>
-            <?php
-            endwhile;
-        else :
+        <?php
+            }
+
+        } else{
             echo '<p> No content found </p>' ;
-        endif;
+        }
         ?>
     </div>
 
