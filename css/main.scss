@@ -51,6 +51,9 @@ body{
     margin:0;
     line-height: 40px;
   }
+  p{
+    color:#555;
+  }
 }
 
   //Most ul:s uses this class to bring the basic style of ul:s.
@@ -282,7 +285,6 @@ body{
 
   //Every Post uses this container
   .post {
-    color: $post-text-color;
 
     //Article for every post
     article {

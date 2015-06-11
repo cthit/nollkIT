@@ -1,5 +1,5 @@
 <?php
-    /* Template Name: NollKIT */
+    /* Template Name: NollKIT-Pateter */
     get_header();
     the_post();
 ?>

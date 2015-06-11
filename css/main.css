@@ -398,6 +398,8 @@ body {
   body h2 {
     margin: 0;
     line-height: 40px; }
+  body p {
+    color: #555; }
 
 .list {
   list-style-type: none;
@@ -565,28 +567,26 @@ body {
     .posts-container.first-page {
       width: 100%; } }
 
-.post {
-  color: black; }
-  .post article {
-    border-radius: 0.15em;
-    background-color: white;
-    width: 100%;
-    margin: 0 0 1% 0; }
-  .post .post-header-container {
-    border-top-left-radius: 0.15em;
-    border-top-right-radius: 0.15em;
-    text-align: center;
-    color: white;
-    height: 2.5em;
-    background: #005a7d none;
-    margin-top: 0; }
-    .post .post-header-container.faq-header {
-      cursor: pointer; }
-  .post .image-container {
-    width: 100%;
-    text-align: center; }
-    .post .image-container img {
-      width: 100%; }
+.post article {
+  border-radius: 0.15em;
+  background-color: white;
+  width: 100%;
+  margin: 0 0 1% 0; }
+.post .post-header-container {
+  border-top-left-radius: 0.15em;
+  border-top-right-radius: 0.15em;
+  text-align: center;
+  color: white;
+  height: 2.5em;
+  background: #005a7d none;
+  margin-top: 0; }
+  .post .post-header-container.faq-header {
+    cursor: pointer; }
+.post .image-container {
+  width: 100%;
+  text-align: center; }
+  .post .image-container img {
+    width: 100%; }
 
 .modal-panel {
   display: none;
