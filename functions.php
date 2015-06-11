@@ -13,6 +13,10 @@ function addResources() {
         wp_enqueue_script('phaddergroups-js',get_template_directory_uri() . '/js/phaddergroups-modal-panel.js');
     }
 
+    if(is_page_template('templates/template-faq.php')){
+        wp_enqueue_script('faq',get_template_directory_uri() . '/js/faq.js');
+    }
+
 
 }
 
