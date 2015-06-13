@@ -392,14 +392,21 @@ body {
   padding: 0;
   position: relative;
   line-height: 25px; }
-  body h1 {
-    margin: 0;
-    line-height: 40px; }
-  body h2 {
-    margin: 0;
-    line-height: 40px; }
-  body p {
-    color: #555; }
+
+h1 {
+  margin: 0;
+  line-height: 40px; }
+
+h2 {
+  margin: 0;
+  line-height: 40px; }
+
+p {
+  color: #555; }
+
+button {
+  border: 0;
+  background-color: transparent; }
 
 .list {
   list-style-type: none;
@@ -580,6 +587,11 @@ body {
   height: 2.5em;
   background: #005a7d none;
   margin-top: 0; }
+  .post .post-header-container a {
+    color: white;
+    text-decoration: none; }
+  .post .post-header-container a:hover {
+    color: gray; }
   .post .post-header-container.faq-header {
     cursor: pointer; }
 .post .image-container {
@@ -587,6 +599,29 @@ body {
   text-align: center; }
   .post .image-container img {
     width: 100%; }
+
+.post-footer-container {
+  padding: 0 3% 2% 3%;
+  overflow: auto; }
+  .post-footer-container i {
+    margin: 5px; }
+  .post-footer-container a {
+    color: black; }
+    .post-footer-container a p {
+      display: inline-block;
+      text-decoration: underline; }
+  .post-footer-container a:hover p {
+    color: gray; }
+
+.previous-post {
+  float: left; }
+  .previous-post p {
+    margin-right: 5px; }
+
+.next-post {
+  float: right; }
+  .next-post p {
+    margin-left: 5px; }
 
 .modal-panel {
   display: none;

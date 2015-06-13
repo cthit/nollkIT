@@ -43,18 +43,26 @@ body{
   padding: 0;
   position: relative;
   line-height: 25px;
+
+}
   h1{
     margin:0;
     line-height: 40px;
   }
+
   h2{
     margin:0;
     line-height: 40px;
   }
+
   p{
     color:#555;
   }
-}
+
+  button{
+    border:0;
+    background-color: transparent;
+  }
 
   //Most ul:s uses this class to bring the basic style of ul:s.
   .list {
@@ -303,6 +311,13 @@ body{
       height: 2.5em;
       background: $post-header-background-color none;
       margin-top: 0;
+      a{
+        color:white;
+        text-decoration: none;
+      }
+      a:hover{
+        color:gray;
+      }
       &.faq-header {
         cursor: pointer;
       }
@@ -317,6 +332,41 @@ body{
       img {
         width: 100%;
       }
+    }
+  }
+
+  .post-footer-container{
+    padding:0 3% 2% 3%;
+    overflow: auto;
+
+    i{
+      margin: 5px;
+    }
+
+    a{
+      color:black;
+      p{
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+    a:hover{
+      p{
+        color:gray;
+      }
+    }
+  }
+  .previous-post{
+    float:left;
+    p{
+      margin-right:5px;
+    }
+  }
+
+  .next-post{
+    float:right;
+    p{
+      margin-left:5px;
     }
   }
 
