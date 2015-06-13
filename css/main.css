@@ -397,13 +397,13 @@ body {
   position: relative;
   line-height: 25px; }
 
-h1 {
-  margin: 0;
-  line-height: 40px; }
-
 h2 {
+  margin: 0; }
+
+h5 {
+  text-align: center;
   margin: 0;
-  line-height: 40px; }
+  line-height: 20px; }
 
 p {
   color: #555; }
@@ -439,12 +439,12 @@ button {
   display: none;
   position: fixed;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 2px;
   text-align: center;
   z-index: 11;
   /* 1px higher than the overlay layer */ }
-  .calendar-modal-panel h3 {
-    line-height: 0; }
+  .calendar-modal-panel h1 {
+    margin: 10px 0; }
   .calendar-modal-panel ul {
     padding: 5%;
     text-align: left; }
@@ -571,6 +571,9 @@ button {
 
 .posts-container.first-page {
   width: 58%; }
+  .posts-container.first-page h2 {
+    text-decoration: underline;
+    padding-bottom: 19px; }
   @media screen and (max-width: 960px) {
     .posts-container.first-page {
       width: 90%; } }
@@ -583,26 +586,29 @@ button {
   background-color: white;
   width: 100%;
   margin: 0 0 1% 0; }
-.post .post-header-container {
-  border-top-left-radius: 0.15em;
-  border-top-right-radius: 0.15em;
-  text-align: center;
-  color: white;
-  height: 2.5em;
-  background: #005a7d none;
-  margin-top: 0; }
-  .post .post-header-container a {
-    color: white;
-    text-decoration: none; }
-  .post .post-header-container a:hover {
-    color: gray; }
-  .post .post-header-container.faq-header {
-    cursor: pointer; }
 .post .image-container {
   width: 100%;
   text-align: center; }
   .post .image-container img {
     width: 100%; }
+
+.post-header-container {
+  border-top-left-radius: 0.15em;
+  border-top-right-radius: 0.15em;
+  text-align: center;
+  color: white;
+  background: #005a7d none;
+  margin-top: 0;
+  padding: 3%; }
+  .post-header-container a {
+    color: white;
+    text-decoration: none; }
+  .post-header-container a:hover {
+    color: gray; }
+  .post-header-container.faq-header {
+    cursor: pointer; }
+    .post-header-container.faq-header h2 {
+      text-decoration: underline; }
 
 .post-footer-container {
   padding: 0 3% 2% 3%;
@@ -632,7 +638,7 @@ button {
   position: fixed;
   z-index: 11;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 2px;
   text-align: center;
   overflow: auto; }
   .modal-panel img {
