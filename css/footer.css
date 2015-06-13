@@ -49,6 +49,10 @@
   .good-links {
     display: none; } }
 
+.footer-logo-container {
+  text-align: center;
+  padding: 1rem 0; }
+
 .menu-footer-container {
   text-align: center; }
   .menu-footer-container ul {

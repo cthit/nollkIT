@@ -363,6 +363,10 @@ iframe {
   .good-links {
     display: none; } }
 
+.footer-logo-container {
+  text-align: center;
+  padding: 1rem 0; }
+
 .menu-footer-container {
   text-align: center; }
   .menu-footer-container ul {
@@ -511,7 +515,8 @@ button {
   border-radius: 0.15em;
   float: left;
   width: 20%;
-  text-align: center; }
+  text-align: center;
+  color: white; }
   #group-points ul {
     text-align: left; }
   #group-points li {
@@ -525,21 +530,25 @@ button {
   text-align: center;
   float: right;
   width: 100%; }
-  #calendar .fc-toolbar .fc-left {
-    display: block;
-    width: 100%;
-    text-align: center; }
-    #calendar .fc-toolbar .fc-left h2 {
-      float: none; }
-  #calendar .fc-toolbar .fc-right {
-    padding: 1rem 0 1rem 0;
-    display: block;
-    width: 100%;
-    text-align: center; }
-    #calendar .fc-toolbar .fc-right button {
-      float: none; }
-    #calendar .fc-toolbar .fc-right .fc-button-group {
-      float: none; }
+  #calendar .fc-toolbar {
+    margin: 0;
+    background-color: #005a7d; }
+    #calendar .fc-toolbar .fc-left {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      #calendar .fc-toolbar .fc-left h2 {
+        color: white;
+        float: none; }
+    #calendar .fc-toolbar .fc-right {
+      padding: 1rem 0 1rem 0;
+      display: block;
+      width: 100%;
+      text-align: center; }
+      #calendar .fc-toolbar .fc-right button {
+        float: none; }
+      #calendar .fc-toolbar .fc-right .fc-button-group {
+        float: none; }
 
 #arrow-container {
   display: none; }
@@ -547,7 +556,7 @@ button {
     #arrow-container {
       display: block;
       text-align: center;
-      padding-bottom: 1rem; } }
+      padding: 1rem 0; } }
 
 @media screen and (max-width: 960px) {
   .arrow {
@@ -591,6 +600,9 @@ button {
   text-align: center; }
   .post .image-container img {
     width: 100%; }
+
+.post.single h2 {
+  padding-bottom: 19px; }
 
 .post-header-container {
   border-top-left-radius: 0.15em;

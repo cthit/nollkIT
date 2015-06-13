@@ -195,6 +195,7 @@ body{
     float: left;
     width: 20%;
     text-align: center;
+    color:white;
 
     ul {
       text-align: left;
@@ -217,11 +218,14 @@ body{
     width: 100%;
 
     .fc-toolbar {
+      margin:0;
+      background-color: $post-header-background-color;
       .fc-left {
         display: block;
         width: 100%;
         text-align: center;
         h2 {
+          color:white;
           float: none;
         }
       }
@@ -247,7 +251,7 @@ body{
     @media screen and (max-width: 960px) {
       display: block;
       text-align: center;
-      padding-bottom: 1rem;
+      padding:1rem 0;
     }
   }
 
@@ -314,6 +318,12 @@ body{
       img {
         width: 100%;
       }
+    }
+  }
+
+  .post.single{
+    h2{
+      padding-bottom:19px;
     }
   }
 
