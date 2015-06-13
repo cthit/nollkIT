@@ -47,7 +47,7 @@ $(document).ready(function(){
     });
 
     //Adds the arrows to the fullCalendar
-    $('.fc-toolbar').after('<div id="arrow-container">' +
+    $('.fc-view-container').after('<div id="arrow-container">' +
     '<i id="arrow-down" class="fa fa-chevron-down arrow"></i>' +
     '<i id="arrow-up" class="fa fa-chevron-up arrow"></i></div>');
 
