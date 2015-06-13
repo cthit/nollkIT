@@ -196,6 +196,12 @@ body{
     width: 20%;
     text-align: center;
     color:white;
+    padding:1.5rem;
+    box-sizing: border-box;
+
+    h3{
+      margin-top:0;
+    }
 
     ul {
       text-align: left;
@@ -218,7 +224,7 @@ body{
     width: 100%;
 
     .fc-toolbar {
-      padding:3%;
+      padding:1.5rem;
       margin:0;
       background-color: $post-header-background-color;
       .fc-left {
@@ -335,7 +341,7 @@ body{
     color: $post-header-text-color;
     background: $post-header-background-color none;
     margin-top: 0;
-    padding:3%;
+    padding:1.5rem;
 
     a{
       color:white;
