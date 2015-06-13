@@ -17,7 +17,7 @@ the_post();
 
 <div class="calendar-modal-panel modal-panel">
     <button id="calendar-close-modal-panel" class="close-modal-panel"><i class="fa fa-times"></i></button>
-    <h3 id="calendar-modal-panel-title">Title</h3>
+    <h1 id="calendar-modal-panel-title">Title</h1>
     <div id="calendar-modal-panel-content-container">
         <ul class="list" id="where-when-how-list">
             <li id="where">Var? Hubben 2.1</li>
@@ -67,17 +67,26 @@ the_post();
                     <article>
                         <header class="post-header-container">
                             <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                            <?php
+                                $tags = get_the_tags();
+                                if($tags){
+
+                            ?>
+                            <h5>Taggar:
+                                <?php
+                                    foreach($tags as $tag){
+                                        echo '#' . $tag->name . ' ';
+                                    }
+                                ?>
+                            </h5>
+                            <?php
+                                }
+                            ?>
+                            <h5><?php echo get_the_date(); ?>, <?php echo get_the_time(); ?> av: <?php echo get_the_author(); ?>  </h5>
                         </header>
                         <div class="post-content-container">
                             <?php the_content(); ?>
                         </div>
-                        <footer class="post-footer-container">
-                            <ul class="list">
-                                <li><?php echo get_the_date(); ?></li>
-                                <li><?php echo get_the_time(); ?></li>
-                                <li>Created by: <?php echo get_the_author(); ?></li>
-                            </ul>
-                        </footer>
                     </article>
                 </section>
         <?php

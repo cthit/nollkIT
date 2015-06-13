@@ -45,14 +45,14 @@ body{
   line-height: 25px;
 
 }
-  h1{
-    margin:0;
-    line-height: 40px;
-  }
-
   h2{
     margin:0;
-    line-height: 40px;
+  }
+
+  h5{
+    text-align: center;
+    margin:0;
+    line-height:20px;
   }
 
   p{
@@ -99,12 +99,14 @@ body{
     display:none;
     position: fixed;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 2px;
     text-align: center;
     z-index: 11; /* 1px higher than the overlay layer */
-    h3{
-      line-height:0;
+
+    h1{
+      margin: 10px 0;
     }
+
     ul {
       padding: 5%;
       text-align: left;
@@ -281,6 +283,10 @@ body{
 
   .posts-container.first-page {
     width: 58%;
+    h2{
+      text-decoration: underline;
+      padding-bottom:19px;
+    }
 
     @media screen and (max-width: 960px) {
       width: 90%;
@@ -302,35 +308,35 @@ body{
       margin: 0 0 1% 0;
     }
 
-    //Header of every post.
-    .post-header-container {
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-      text-align: center;
-      color: $post-header-text-color;
-      height: 2.5em;
-      background: $post-header-background-color none;
-      margin-top: 0;
-      a{
-        color:white;
-        text-decoration: none;
-      }
-      a:hover{
-        color:gray;
-      }
-      &.faq-header {
-        cursor: pointer;
-      }
-    }
-
-
-
-
     .image-container {
       width: 100%;
       text-align: center;
       img {
         width: 100%;
+      }
+    }
+  }
+
+  .post-header-container{
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    text-align: center;
+    color: $post-header-text-color;
+    background: $post-header-background-color none;
+    margin-top: 0;
+    padding:3%;
+
+    a{
+      color:white;
+      text-decoration: none;
+    }
+    a:hover{
+      color:gray;
+    }
+    &.faq-header {
+      cursor: pointer;
+      h2{
+        text-decoration: underline;
       }
     }
   }
@@ -375,7 +381,7 @@ body{
     position: fixed;
     z-index: 11;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 2px;
     text-align: center;
     overflow:auto;
     img{
