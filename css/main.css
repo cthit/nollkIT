@@ -622,19 +622,6 @@ button {
     .post-header-container.faq-header h2 {
       text-decoration: underline; }
 
-.post-footer-container {
-  padding: 0 3% 2% 3%;
-  overflow: auto; }
-  .post-footer-container i {
-    margin: 5px; }
-  .post-footer-container a {
-    color: black; }
-    .post-footer-container a p {
-      display: inline-block;
-      text-decoration: underline; }
-  .post-footer-container a:hover p {
-    color: gray; }
-
 .previous-post {
   float: left; }
   .previous-post p {
@@ -703,11 +690,23 @@ button {
 
 .post-footer-container {
   text-align: center;
-  font-size: 0.7em;
   color: black;
   background-color: 49372;
   border-bottom-right-radius: 0.15em;
-  border-bottom-left-radius: 0.15em; }
+  border-bottom-left-radius: 0.15em;
+  padding: 0 3% 2% 3%;
+  overflow: auto;
+  font-size: 1rem; }
+  .post-footer-container i {
+    margin: 5px; }
+  .post-footer-container a {
+    padding: 1rem;
+    color: black; }
+    .post-footer-container a p {
+      display: inline-block;
+      text-decoration: underline; }
+  .post-footer-container a:hover p {
+    color: gray; }
   .post-footer-container ul {
     width: 100%;
     padding: 0;
