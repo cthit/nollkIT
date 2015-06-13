@@ -87,6 +87,9 @@ the_post();
                         <div class="post-content-container">
                             <?php the_content(); ?>
                         </div>
+                        <footer class="post-footer-container">
+                            <a href="<?php the_permalink(); ?>"><p>Läs mer</p></a>
+                        </footer>
                     </article>
                 </section>
         <?php
