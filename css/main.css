@@ -363,6 +363,10 @@ iframe {
   .good-links {
     display: none; } }
 
+.footer-logo-container {
+  text-align: center;
+  padding: 1rem 0; }
+
 .menu-footer-container {
   text-align: center; }
   .menu-footer-container ul {
@@ -511,7 +515,8 @@ button {
   border-radius: 0.15em;
   float: left;
   width: 20%;
-  text-align: center; }
+  text-align: center;
+  color: white; }
   #group-points ul {
     text-align: left; }
   #group-points li {
@@ -525,21 +530,25 @@ button {
   text-align: center;
   float: right;
   width: 100%; }
-  #calendar .fc-toolbar .fc-left {
-    display: block;
-    width: 100%;
-    text-align: center; }
-    #calendar .fc-toolbar .fc-left h2 {
-      float: none; }
-  #calendar .fc-toolbar .fc-right {
-    padding: 1rem 0 1rem 0;
-    display: block;
-    width: 100%;
-    text-align: center; }
-    #calendar .fc-toolbar .fc-right button {
-      float: none; }
-    #calendar .fc-toolbar .fc-right .fc-button-group {
-      float: none; }
+  #calendar .fc-toolbar {
+    margin: 0;
+    background-color: #005a7d; }
+    #calendar .fc-toolbar .fc-left {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      #calendar .fc-toolbar .fc-left h2 {
+        color: white;
+        float: none; }
+    #calendar .fc-toolbar .fc-right {
+      padding: 1rem 0 1rem 0;
+      display: block;
+      width: 100%;
+      text-align: center; }
+      #calendar .fc-toolbar .fc-right button {
+        float: none; }
+      #calendar .fc-toolbar .fc-right .fc-button-group {
+        float: none; }
 
 #arrow-container {
   display: none; }
@@ -547,7 +556,7 @@ button {
     #arrow-container {
       display: block;
       text-align: center;
-      padding-bottom: 1rem; } }
+      padding: 1rem 0; } }
 
 @media screen and (max-width: 960px) {
   .arrow {
@@ -592,6 +601,9 @@ button {
   .post .image-container img {
     width: 100%; }
 
+.post.single h2 {
+  padding-bottom: 19px; }
+
 .post-header-container {
   border-top-left-radius: 0.15em;
   border-top-right-radius: 0.15em;
@@ -609,19 +621,6 @@ button {
     cursor: pointer; }
     .post-header-container.faq-header h2 {
       text-decoration: underline; }
-
-.post-footer-container {
-  padding: 0 3% 2% 3%;
-  overflow: auto; }
-  .post-footer-container i {
-    margin: 5px; }
-  .post-footer-container a {
-    color: black; }
-    .post-footer-container a p {
-      display: inline-block;
-      text-decoration: underline; }
-  .post-footer-container a:hover p {
-    color: gray; }
 
 .previous-post {
   float: left; }
@@ -691,11 +690,23 @@ button {
 
 .post-footer-container {
   text-align: center;
-  font-size: 0.7em;
   color: black;
   background-color: 49372;
   border-bottom-right-radius: 0.15em;
-  border-bottom-left-radius: 0.15em; }
+  border-bottom-left-radius: 0.15em;
+  padding: 0 3% 2% 3%;
+  overflow: auto;
+  font-size: 1rem; }
+  .post-footer-container i {
+    margin: 5px; }
+  .post-footer-container a {
+    padding: 1rem;
+    color: black; }
+    .post-footer-container a p {
+      display: inline-block;
+      text-decoration: underline; }
+  .post-footer-container a:hover p {
+    color: gray; }
   .post-footer-container ul {
     width: 100%;
     padding: 0;

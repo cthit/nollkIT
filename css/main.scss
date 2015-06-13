@@ -195,6 +195,7 @@ body{
     float: left;
     width: 20%;
     text-align: center;
+    color:white;
 
     ul {
       text-align: left;
@@ -217,11 +218,14 @@ body{
     width: 100%;
 
     .fc-toolbar {
+      margin:0;
+      background-color: $post-header-background-color;
       .fc-left {
         display: block;
         width: 100%;
         text-align: center;
         h2 {
+          color:white;
           float: none;
         }
       }
@@ -247,7 +251,7 @@ body{
     @media screen and (max-width: 960px) {
       display: block;
       text-align: center;
-      padding-bottom: 1rem;
+      padding:1rem 0;
     }
   }
 
@@ -317,6 +321,12 @@ body{
     }
   }
 
+  .post.single{
+    h2{
+      padding-bottom:19px;
+    }
+  }
+
   .post-header-container{
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -337,28 +347,6 @@ body{
       cursor: pointer;
       h2{
         text-decoration: underline;
-      }
-    }
-  }
-
-  .post-footer-container{
-    padding:0 3% 2% 3%;
-    overflow: auto;
-
-    i{
-      margin: 5px;
-    }
-
-    a{
-      color:black;
-      p{
-        display: inline-block;
-        text-decoration: underline;
-      }
-    }
-    a:hover{
-      p{
-        color:gray;
       }
     }
   }
@@ -460,11 +448,31 @@ body{
   // Post footer container start
   .post-footer-container {
     text-align: center;
-    font-size: 0.7em;
     color: $post-footer-text-color;
     background-color: $post-footer-background-color;
     border-bottom-right-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
+    padding:0 3% 2% 3%;
+    overflow: auto;
+    font-size: 1rem;
+
+    i{
+      margin: 5px;
+    }
+
+    a{
+      padding:1rem;
+      color:black;
+      p{
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+    a:hover{
+      p{
+        color:gray;
+      }
+    }
 
     ul {
       width: 100%;
