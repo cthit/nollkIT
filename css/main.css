@@ -531,6 +531,7 @@ button {
   float: right;
   width: 100%; }
   #calendar .fc-toolbar {
+    padding: 3%;
     margin: 0;
     background-color: #005a7d; }
     #calendar .fc-toolbar .fc-left {
