@@ -516,7 +516,11 @@ button {
   float: left;
   width: 20%;
   text-align: center;
-  color: white; }
+  color: white;
+  padding: 1.5rem;
+  box-sizing: border-box; }
+  #group-points h3 {
+    margin-top: 0; }
   #group-points ul {
     text-align: left; }
   #group-points li {
@@ -531,7 +535,7 @@ button {
   float: right;
   width: 100%; }
   #calendar .fc-toolbar {
-    padding: 3%;
+    padding: 1.5rem;
     margin: 0;
     background-color: #005a7d; }
     #calendar .fc-toolbar .fc-left {
@@ -612,7 +616,7 @@ button {
   color: white;
   background: #005a7d none;
   margin-top: 0;
-  padding: 3%; }
+  padding: 1.5rem; }
   .post-header-container a {
     color: white;
     text-decoration: none; }
