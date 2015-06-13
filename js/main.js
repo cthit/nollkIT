@@ -80,8 +80,10 @@ $(document).ready(function(){
 
     //If resize calls changeAccordingToSize with the new screenWidth
     $(window).resize(function(){
-        screenWidth = $(window).width();
-        changeAccordingToSize();
+        if(screenWidth !== $(window).width()){
+            screenWidth = $(window).width();
+            changeAccordingToSize();
+        }
     });
 
     //On click for arrow pointing down
