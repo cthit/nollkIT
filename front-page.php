@@ -66,7 +66,7 @@ the_post();
                 <section class="post">
                     <article>
                         <header class="post-header-container">
-                            <h2><?php the_title(); ?></2>
+                            <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                         </header>
                         <div class="post-content-container">
                             <?php the_content(); ?>
