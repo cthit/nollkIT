@@ -36,11 +36,7 @@ $border-radius:0.15em;
   }
 }
 
-li:hover{
-  a{
-    text-decoration: underline;
-  }
-}
+
 
 //common class for the 3x section elements in the footer.
 .lots-of-links {
@@ -57,6 +53,11 @@ li:hover{
 #sektionen {
   font-size: 0;
 
+  li:hover{
+    a{
+      text-decoration: underline;
+    }
+  }
   ul {
     font-size: 12px;
     display: inline-block;
