@@ -56,11 +56,23 @@ the_post();
 
     <div class="posts-container first-page">
         <?php
-        $args = array('order' => 'DESC','orderby' => 'date');
-        $the_query = new WP_Query($args);
-        if ($the_query->have_posts()){
-            while($the_query->have_posts()){
-                $the_query->the_post();
+        if ( get_query_var('paged') ) {
+            $paged = get_query_var('paged');
+        } elseif ( get_query_var('page') ) {
+            $paged = get_query_var('page');
+        } else {
+            $paged = 1;
+        }
+        $args = array(
+            'order' => 'DESC',
+            'orderby' => 'date',
+            'paged' => $paged,
+            'posts_per_page' => '3'
+        );
+        query_posts($args);
+        if (have_posts()){
+            while(have_posts()){
+                the_post();
 
             ?>
                 <section class="post">
@@ -98,7 +110,31 @@ the_post();
         } else{
             echo '<p> No content found </p>' ;
         }
+
         ?>
+        <footer class="pagination">
+            <div class="older-post-link-container">
+            <?php
+                if(get_previous_posts_link() !== null){
+                    echo get_previous_posts_link('<i class="fa fa-chevron-left"></i>' . ' ' . '<p>Nyare inlägg </p>' );
+                }
+            ?>
+            </div>
+            <div class="newer-post-link-container">
+            <?php
+                if(get_next_posts_link() !== null){
+                    echo get_next_posts_link( '<p>Äldre inlägg</p>' . ' ' . '<i class="fa fa-chevron-right"></i>');
+                }
+
+            ?>
+            </div>
+            <div class="page-number-container">
+                <?php
+                echo paginate_links();
+                ?>
+            </div>
+        </footer>
+
     </div>
 
 </div>
