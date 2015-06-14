@@ -21,8 +21,6 @@
 
 #sektionen {
   font-size: 0; }
-  #sektionen li:hover a {
-    text-decoration: underline; }
   #sektionen ul {
     font-size: 12px;
     display: inline-block;
@@ -55,6 +53,9 @@
 @media screen and (max-width: 960px) {
   .good-links {
     display: none; } }
+
+.lots-of-links li:hover a {
+  text-decoration: underline; }
 
 .footer-logo-container {
   text-align: center;
