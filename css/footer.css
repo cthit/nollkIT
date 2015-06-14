@@ -11,9 +11,6 @@
     font-size: 0;
     width: 100%; }
 
-li:hover a {
-  text-decoration: underline; }
-
 .lots-of-links {
   display: inline-block;
   width: 33.333333%;
@@ -24,6 +21,8 @@ li:hover a {
 
 #sektionen {
   font-size: 0; }
+  #sektionen li:hover a {
+    text-decoration: underline; }
   #sektionen ul {
     font-size: 12px;
     display: inline-block;
