@@ -67,7 +67,6 @@ the_post();
             'order' => 'DESC',
             'orderby' => 'date',
             'paged' => $paged,
-            'posts_per_page' => '3'
         );
         query_posts($args);
         if (have_posts()){
