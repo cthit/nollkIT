@@ -783,7 +783,8 @@ button {
   vertical-align: middle; }
   @media screen and (max-width: 660px) {
     .page-number-container {
-      width: 100%; } }
+      width: 100%;
+      clear: both; } }
 
 .page-numbers.next {
   display: none; }
