@@ -52,12 +52,7 @@ $border-radius:0.15em;
 //Target specially the container for the sektionen related information.
 #sektionen {
   font-size: 0;
-
-  li:hover{
-    a{
-      text-decoration: underline;
-    }
-  }
+  
   ul {
     font-size: 12px;
     display: inline-block;
@@ -110,7 +105,14 @@ $border-radius:0.15em;
     display:none;
   }
 }
-//End lots-of-links
+
+.lots-of-links{
+  li:hover{
+    a{
+      text-decoration: underline;
+    }
+  }
+}
 
 .footer-logo-container{
   text-align: center;
