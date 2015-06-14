@@ -558,12 +558,18 @@ body{
   float:right;
   width:20%;
   text-align: right;
+  @media screen and (max-width: 660px){
+    width: 50%;
+  }
 }
 
 .older-post-link-container{
   float:left;
   width:20%;
   text-align: left;
+  @media screen and (max-width: 660px){
+    width: 50%;
+  }
 }
 
 .page-number-container{
@@ -571,6 +577,10 @@ body{
   width:60%;
   text-align: center;
   vertical-align: middle;
+
+  @media screen and (max-width: 660px){
+    width: 100%;
+  }
 }
 
 .page-numbers{
