@@ -627,12 +627,47 @@ button {
     .post-header-container.faq-header h2 {
       text-decoration: underline; }
 
+.post-footer-container {
+  text-align: center;
+  color: black;
+  background-color: 49372;
+  border-bottom-right-radius: 0.15em;
+  border-bottom-left-radius: 0.15em;
+  padding: 0 3% 2% 3%;
+  overflow: auto;
+  font-size: 1rem; }
+  .post-footer-container i {
+    margin: 5px; }
+  .post-footer-container a {
+    color: black; }
+    .post-footer-container a p {
+      display: inline-block;
+      text-decoration: underline; }
+  .post-footer-container a:hover p {
+    color: gray; }
+  .post-footer-container ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  .post-footer-container li {
+    display: inline-block;
+    width: 31%; }
+  .post-footer-container li:first-child {
+    text-align: left;
+    padding-left: 1%; }
+  .post-footer-container li:last-child {
+    text-align: right;
+    padding-right: 1%; }
+
 .previous-post {
+  padding: 1rem 1rem 1rem 0;
   float: left; }
   .previous-post p {
     margin-right: 5px; }
 
 .next-post {
+  padding: 1rem 0 1rem 1rem;
   float: right; }
   .next-post p {
     margin-left: 5px; }
@@ -693,40 +728,6 @@ button {
     background-color: blue;
     height: 50px;
     width: 5%; }
-
-.post-footer-container {
-  text-align: center;
-  color: black;
-  background-color: 49372;
-  border-bottom-right-radius: 0.15em;
-  border-bottom-left-radius: 0.15em;
-  padding: 0 3% 2% 3%;
-  overflow: auto;
-  font-size: 1rem; }
-  .post-footer-container i {
-    margin: 5px; }
-  .post-footer-container a {
-    padding: 1rem;
-    color: black; }
-    .post-footer-container a p {
-      display: inline-block;
-      text-decoration: underline; }
-  .post-footer-container a:hover p {
-    color: gray; }
-  .post-footer-container ul {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style-type: none; }
-  .post-footer-container li {
-    display: inline-block;
-    width: 31%; }
-  .post-footer-container li:first-child {
-    text-align: left;
-    padding-left: 1%; }
-  .post-footer-container li:last-child {
-    text-align: right;
-    padding-right: 1%; }
 
 .scheme-daily {
   display: block;

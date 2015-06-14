@@ -357,7 +357,59 @@ body{
       }
     }
   }
+
+  // Post footer container start
+  .post-footer-container {
+    text-align: center;
+    color: $post-footer-text-color;
+    background-color: $post-footer-background-color;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    padding:0 3% 2% 3%;
+    overflow: auto;
+    font-size: 1rem;
+
+    i{
+      margin: 5px;
+    }
+
+    a{
+
+      color:black;
+      p{
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+    a:hover{
+      p{
+        color:gray;
+      }
+    }
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none
+    }
+    li {
+      display: inline-block;
+      width: 31%;
+    }
+
+    li:first-child {
+      text-align: left;
+      padding-left: 1%;
+    }
+
+    li:last-child {
+      text-align: right;
+      padding-right: 1%;
+    }
+  }
   .previous-post{
+    padding:1rem 1rem 1rem 0;
     float:left;
     p{
       margin-right:5px;
@@ -365,6 +417,7 @@ body{
   }
 
   .next-post{
+    padding:1rem 0 1rem 1rem;
     float:right;
     p{
       margin-left:5px;
@@ -453,56 +506,7 @@ body{
   }
   //End content container for scheme
 
-  // Post footer container start
-  .post-footer-container {
-    text-align: center;
-    color: $post-footer-text-color;
-    background-color: $post-footer-background-color;
-    border-bottom-right-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
-    padding:0 3% 2% 3%;
-    overflow: auto;
-    font-size: 1rem;
 
-    i{
-      margin: 5px;
-    }
-
-    a{
-      padding:1rem;
-      color:black;
-      p{
-        display: inline-block;
-        text-decoration: underline;
-      }
-    }
-    a:hover{
-      p{
-        color:gray;
-      }
-    }
-
-    ul {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      list-style-type: none
-    }
-    li {
-      display: inline-block;
-      width: 31%;
-    }
-
-    li:first-child {
-      text-align: left;
-      padding-left: 1%;
-    }
-
-    li:last-child {
-      text-align: right;
-      padding-right: 1%;
-    }
-  }
 
 //END POST FOOTER
 
