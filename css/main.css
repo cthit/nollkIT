@@ -799,4 +799,25 @@ button {
 .page-numbers.prev {
   display: none; }
 
+.tags-container {
+  float: right;
+  width: 25%; }
+  .tags-container h5 {
+    color: gray; }
+
+.share-container {
+  width: 25%;
+  margin: 0 auto; }
+  .share-container i {
+    font-size: 1.5625rem; }
+
+.fa-twitter {
+  color: #4099FF; }
+
+.fa-facebook {
+  color: #3b5998; }
+
+.fa-pinterest-p {
+  color: #C92228; }
+
 /*# sourceMappingURL=main.css.map */
