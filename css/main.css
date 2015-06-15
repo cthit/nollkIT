@@ -804,12 +804,21 @@ button {
   width: 25%; }
   .tags-container h5 {
     color: gray; }
+  @media screen and (max-width: 660px) {
+    .tags-container {
+      padding: 0.3rem 0;
+      float: none;
+      width: 100%; } }
 
 .share-container {
   width: 25%;
   margin: 0 auto; }
   .share-container i {
     font-size: 1.5625rem; }
+  @media screen and (max-width: 660px) {
+    .share-container {
+      padding: 0.3rem 0;
+      width: 100%; } }
 
 .fa-twitter {
   color: #4099FF; }
