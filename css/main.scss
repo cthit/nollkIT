@@ -311,6 +311,9 @@ body{
   //Every Post uses this container
   .post {
 
+    img{
+      height:100%;
+    }
     //Article for every post
     article {
       border-radius: $border-radius;

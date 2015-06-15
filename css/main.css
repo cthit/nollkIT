@@ -603,6 +603,8 @@ button {
     .posts-container.first-page {
       width: 100%; } }
 
+.post img {
+  height: 100%; }
 .post article {
   border-radius: 0.15em;
   background-color: white;
