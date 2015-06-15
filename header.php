@@ -42,7 +42,7 @@
 
 
 
-        <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit15_cropped.jpg);">
+        <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit.jpg);">
             <div class="top-bar">
 
                 <?php
