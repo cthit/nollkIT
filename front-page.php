@@ -78,28 +78,40 @@ the_post();
                     <article>
                         <header class="post-header-container">
                             <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                            <?php
-                                $tags = get_the_tags();
-                                if($tags){
 
-                            ?>
-                            <h5>Taggar:
-                                <?php
-                                    foreach($tags as $tag){
-                                        echo '#' . $tag->name . ' ';
-                                    }
-                                ?>
-                            </h5>
-                            <?php
-                                }
-                            ?>
-                            <h5><?php echo get_the_date(); ?>, <?php echo get_the_time(); ?> av: <?php echo get_the_author(); ?>  </h5>
+                            <h5><?php echo get_the_date(); ?>, <?php echo get_the_time(); ?> </h5>
                         </header>
                         <div class="post-content-container">
                             <?php the_content(); ?>
                         </div>
                         <footer class="post-footer-container">
-                            <a href="<?php the_permalink(); ?>"><p>Läs mer</p></a>
+                            <div class="tags-container">
+                                <?php
+                                    $tags = get_the_tags();
+
+                                    if( $tags ){
+
+                                ?>
+                                <h5>Taggar:
+                                    <?php
+                                        foreach( $tags as $tag ){
+                                            echo '#' . $tag->name . ' ';
+                                        }
+                                    ?>
+                                </h5>
+                                <?php
+                                    }
+                                ?>
+                            </div>
+                            <div class="share-container">
+                                <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><i class="fa fa-facebook"></i></a>
+                                <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>
+                                    &media=<?php $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
+                                    echo $url; ?>"><i class="fa fa-pinterest-p"></i>
+                                </a>
+
+                            </div>
                         </footer>
                     </article>
                 </section>
