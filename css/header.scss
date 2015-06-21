@@ -38,6 +38,10 @@ $post-header-text-color:white;
   @media screen and (max-width: 660px){
     position: absolute;
     z-index: 100;
+
+    i{
+      color:white;
+    }
   }
 }
 
@@ -81,6 +85,12 @@ $post-header-text-color:white;
 
   @media screen and (max-width: 960px) {
     display: none;
+  }
+
+  @media screen and (max-width: 660px) {
+    a{
+      color:white;
+    }
   }
 }
 
