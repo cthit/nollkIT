@@ -7,7 +7,7 @@
     the_post();
 ?>
 <div class="content-container">
-    <div class="posts-container">
+    <div class="posts-container phaddergroup-container">
         <section class="post">
             <article>
                 <header class="post-header-container">
@@ -28,7 +28,7 @@
                     ++$i;
                     the_row();
         ?>
-                        <section class="post">
+                        <section class="post phaddergroup <?php if($i%2==0){ echo 'even-group'; } ?>">
                             <article>
                                 <header class="post-header-container clickable id-<?php echo $i ?>">
                                     <h2><?php the_sub_field('titel'); ?></h2>
