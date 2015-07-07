@@ -621,6 +621,21 @@ button {
   .post .image-container img {
     width: 100%; }
 
+.post.phaddergroup {
+  float: left;
+  width: 49%; }
+  .post.phaddergroup.even-group {
+    margin-left: 2%; }
+
+.posts-container.phaddergroup-container {
+  width: 80%; }
+  @media screen and (max-width: 960px) {
+    .posts-container.phaddergroup-container {
+      width: 90%; } }
+  @media screen and (max-width: 660px) {
+    .posts-container.phaddergroup-container {
+      width: 100%; } }
+
 .post.single h2 {
   padding-bottom: 19px; }
 
