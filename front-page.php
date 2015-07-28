@@ -49,7 +49,7 @@ the_post();
     </div>
 
     <div class="scheme-daily">
-        <div id="calendar">
+        <div id="calendar" class="front-page">
 
         </div>
     </div>
