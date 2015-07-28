@@ -68,6 +68,15 @@ the_post();
             'orderby' => 'date',
             'paged' => $paged,
         );
+   ?>
+                <section class="post">
+                    <article>
+                        <header class="post-header-container">
+                            <h2><a href="/irc">Chatta med oss! :D</a></h2>
+                        </header>
+                    </article>
+                </section>
+        <?php
         query_posts($args);
         if (have_posts()){
             while(have_posts()){
@@ -152,4 +161,4 @@ the_post();
 
 <?php
 get_footer();
-?>
+ >
