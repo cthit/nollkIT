@@ -491,6 +491,9 @@ button {
     .content-container {
       margin: 1% 1% 0 1%; } }
 
+.declaration-frame {
+  margin-right: 0; }
+
 .declaration-container {
   overflow: auto;
   margin: 0 auto;
