@@ -1,19 +1,37 @@
 $(document).ready(function(){
 
+
     //<------------FullCalendar stuff---------------->
+
+    var receptionStart = new Date("2015-08-17");
+
+    /**
+     * A simple function to update the calendar default date depending on the current date.
+     * @param receptionStartDate a javascript date object for when the reception is supposed to start
+     * @returns {*} If the current date is later than the specified reception start
+     * use the current date as default, otherwise use the reception start date as default.
+     */
+    var getDefaultDate = function(receptionStartDate) {
+        //If current date is later than receptionStart
+        if ( new Date().valueOf() >= receptionStartDate.valueOf() ) {
+            return new Date();
+        }
+        return receptionStartDate;
+    }
 
     // GLÖM INTE ATT LÄGGA TILL REFERENS PÅ NYA SIDAN SEDAN! GOOGLE DEV KOLLA
     // http://fullcalendar.io/docs/google_calendar/
     $('#calendar').fullCalendar({
-        defaultView: 'agendaDay',
+        defaultView: 'agendaWeek',
         background:'#005a7d',
         height:'auto',
         axisFormat: 'HH:mm',
         minTime: '06:00:00',
+        defaultDate:getDefaultDate(receptionStart),
         header: {
             left: 'title',
             center: 'prev,next',
-            right: 'today,agendaDay,agendaWeek'
+            right: 'today,agendaDay,agendaWeek,month'
         },
 
         /* Adding google calendar. There's no way of getting around adding the API key (confirmed with Rekoil). */
