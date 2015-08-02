@@ -28,6 +28,7 @@ $(document).ready(function(){
         axisFormat: 'HH:mm',
         minTime: '06:00:00',
         firstDay:1,
+        columnFormat:'ddd D/M',
         defaultDate:getDefaultDate(receptionStart),
         header: {
             left: 'title',
