@@ -38,7 +38,7 @@
             <section id="good-links1" class="good-links lots-of-links">
                 <h3>Bra länkar</h3>
                 <ul class="list">
-                    <li><a href="">Se NollKIT jobba!</a></li>
+                    <li><a href="/stream">Se NollKIT jobba!</a></li>
                     <li><a href="https://chalmers.it/">IT-sektionens interna sida</a></li>
                     <li><a href="https://student.portal.chalmers.se/sv/Sidor/default.aspx">StudentPortalen</a></li>
                     <li><a href="http://www.mk.chs.chalmers.se/">Samordnare för alla NollK:n</a></li>
@@ -57,7 +57,7 @@
             <section id="good-links2"class="good-links lots-of-links">
                 <h3>Fler bra länkar!</h3>
                 <ul class="list">
-                    <li><a href="">Chatta med IT!</a></li>
+                    <li><a href="/irc">Chatta med IT!</a></li>
                     <li><a href="http://www.skatteverket.se/privat.4.76a43be412206334b89800052864.html">Skatteverket</a></li>
                     <li><a href="http://www.adressandring.se/privatperson">Adressändring</a></li>
                     <li><a href="http://www.sj.se/">SJ</a></li>
