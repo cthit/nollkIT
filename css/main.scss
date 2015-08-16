@@ -47,6 +47,10 @@ body{
 }
   h2{
     margin:0;
+
+    @media screen and (max-width: 660px) {
+      font-size:1rem;
+    }
   }
 
   h5{
