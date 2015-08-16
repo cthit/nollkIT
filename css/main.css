@@ -315,7 +315,7 @@ a img.aligncenter {
 iframe {
   position: relative;
   vertical-align: middle;
-  margin-right: 0%; }
+  margin-right: 3%; }
 
 .site-footer {
   overflow: auto;
@@ -379,6 +379,8 @@ iframe {
 .footer-logo-container {
   text-align: center;
   padding: 1rem 0; }
+  .footer-logo-container img {
+    width: 120px; }
 
 .menu-footer-container {
   text-align: center; }
