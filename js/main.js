@@ -29,6 +29,7 @@ $(document).ready(function(){
         minTime: '06:00:00',
         firstDay:1,
         columnFormat:'ddd D/M',
+        timeFormat:'H:mm',
         defaultDate:getDefaultDate(receptionStart),
         header: {
             left: 'title',
