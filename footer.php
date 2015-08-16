@@ -75,7 +75,7 @@
             </section>
 		</div>
         <div class="footer-logo-container">
-            <img src="<?php echo get_template_directory_uri() . "/images/nollkit-logo.png" ?>">
+            <img src="<?php echo get_template_directory_uri() . "/images/nollkit'15.png" ?>">
         </div>
 	</footer>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
