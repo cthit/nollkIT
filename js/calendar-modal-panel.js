@@ -33,7 +33,7 @@ $(document).ready(function(){
 
         //Sets the time for the event.
         $('#where-when-how-list').find('#when').text(
-            "När? " + calendarEvent.start.format("h:mm") + " - " + calendarEvent.end.format("h:mm"));
+            "När? " + calendarEvent.start.format("H:mm") + " - " + calendarEvent.end.format("Hit:mm"));
 
         //Sets the url
         $('#where-when-how-list').find('#event-url').attr('href',calendarEvent.url);
