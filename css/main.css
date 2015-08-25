@@ -544,8 +544,6 @@ button {
     margin-top: 0; }
   #group-points ul {
     text-align: left; }
-  #group-points li {
-    padding: 0.7em 2em; }
   @media screen and (max-width: 960px) {
     #group-points {
       display: none; } }
