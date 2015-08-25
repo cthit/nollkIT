@@ -31,7 +31,7 @@ the_post();
 <div class="content-container">
 
     <div id="group-points">
-        <h3>Nuvarande ställning</h3>
+        <h3>Ställning i phadderkampen</h3>
         <ul class="list">
             <?php
                 // check if the repeater field has rows of data
