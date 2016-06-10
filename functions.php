@@ -1,6 +1,7 @@
 <?php
 
 
+add_theme_support( 'post-thumbnails' );
 function addResources() {
     wp_enqueue_style('font-awesome',get_template_directory_uri() . '/font-awesome/css/font-awesome.css');
 	wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
@@ -23,7 +24,6 @@ function addResources() {
 add_action('wp_enqueue_scripts', 'addResources');
 
 
-add_theme_support( 'post-thumbnails' );
 
 // Navigation Menus
 register_nav_menus(array(
