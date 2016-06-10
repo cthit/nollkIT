@@ -40,9 +40,11 @@
         </script>
 
 
+        <?php if (has_post_thumbnail( $post->ID ) ) {  ?>
+            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+        <?php }?>
 
-
-        <header class="site-header" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/nollkit.jpg);">
+        <header class="site-header" style="background-image:url('<?php echo $image[0]; ?>');">
             <div class="top-bar">
 
                 <?php

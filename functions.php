@@ -22,6 +22,9 @@ function addResources() {
 
 add_action('wp_enqueue_scripts', 'addResources');
 
+
+add_theme_support( 'post-thumbnails' );
+
 // Navigation Menus
 register_nav_menus(array(
 	'header' => __('Header menu'),
